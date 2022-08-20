@@ -1,0 +1,52 @@
+/* * Plants info */
+
+.img-plus-info {
+  display: inline-block;
+}
+.plant-info {
+  display: block;
+}
+.img-money {
+  display: inline-block;
+}
+.move-top {
+  display: inline-block;
+  vertical-align: top;
+}
+h3 {
+  text-align: center;
+}
+
+.sidebar-wrapper {
+  vertical-align: top;
+}
+
+/* *All plants page */
+.plants-img {
+  border: 2px solid orange;
+  max-width: 400px;
+}
+.collection {
+  display: inline-block;
+  padding: 20px;
+}
+.ec-plants {
+  display: inline-block;
+  padding: 20px;
+}
+.ll-plants {
+  display: inline-block;
+  padding: 20px;
+}
+.succulents {
+  display: inline-block;
+  padding: 20px;
+}
+
+/* *Names of plants */
+.names {
+  font-size: var(--f-names);
+}
+.middler {
+  text-align: center;
+}

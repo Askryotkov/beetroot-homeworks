@@ -1,0 +1,33 @@
+/* * Google maps */
+.google-map {
+  display: inline-block;
+  width: auto;
+  margin-left: 20px;
+}
+
+/* *Contacts */
+.contact-title{
+  font-size: var(--f-contact-title);
+}
+
+.contacts {
+  display: inline-block;
+  vertical-align: top;
+  width: 70vh;
+  margin-left: 10px;
+  
+}
+
+.contacts-info{
+  list-style-type: none;
+  margin-top: 10px;
+}
+.contacts-info-item{
+  margin-top: 10px;
+}
+
+.information{
+  display: inline-block;
+  max-width: 30%;
+  
+}

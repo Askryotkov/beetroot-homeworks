@@ -1,0 +1,15 @@
+.money-tree-page-wrapper{
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.plants-img {
+  border: 2px solid orange;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.names {
+  font-size: var(--f-names);
+  text-align: center;
+}

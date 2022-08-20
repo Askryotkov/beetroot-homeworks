@@ -1,0 +1,23 @@
+:root {
+  /* *Colors */
+  /* Color of hovered text */
+  --c-h-text: #a57dd4;
+  /* Color for link when mouse on it */
+  --c-hower: #6ecfcf;
+  /* Color for links */
+  --c-links: #329567;
+  /* Background color */
+  --c-white: #efeded;
+  /* Text color */
+  --c-black: #131212;
+  /* Borders color */
+  --c-b-grey: #6f6f6f;
+
+  /* *Fonts */
+  --f-t-p-description: 30px;
+  --f-contact-title: 24px;
+  --f-p-info: 20px;
+  --f-names: 18px;
+  --f-base: 14px;
+  --f-logo: 20px;
+}

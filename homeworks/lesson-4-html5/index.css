@@ -1,0 +1,44 @@
+/* *Main page and sidebar  */
+
+/* Sidebar */
+.sidebar-wrapper {
+  border-color: orange;
+  display: inline-block;
+  /* border-style: dashed; */
+  padding: 10px;
+  margin: 20px;
+  height: 60vh;
+}
+
+.sidebar-left {
+  display: inline-block;
+  margin-left: 20;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.sidebar-list :first-child {
+  margin: 0;
+}
+
+.sidebar-item {
+  margin-top: 10px;
+}
+
+.main-page {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.page-wrapper {
+  padding: 10px;
+}
+
+.lorem {
+  margin: o auto;
+}

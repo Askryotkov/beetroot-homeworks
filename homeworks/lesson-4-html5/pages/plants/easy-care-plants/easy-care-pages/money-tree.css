@@ -1,0 +1,42 @@
+/* * Image */
+.money-tree-wrapper {
+  display: inline-block;
+  margin-left: 20px;
+  border: 2px solid orange;
+}
+.plants-img{
+  max-width: 400px;
+}
+
+/* * Description */
+
+.m-t-info {
+  display: inline-block;
+  vertical-align: top;
+  /* ? Ask how do it right */
+  max-width: 60%;
+  margin: 10px 0px 0px 15px;
+}
+
+h6 {
+  font-size: var(--f-t-p-description);
+}
+.description {
+  font-size: var(--f-p-info);
+  margin: 10px 0px 0px 15px;
+}
+.special-points {
+  list-style-type: square;
+  margin: 10px 0px 0px 30px;
+}
+.special-points :first-child {
+  margin: 0;
+}
+.special-points-item{
+  margin-top: 10px;
+}
+
+/* *Video */
+.youtube{
+  margin: 20px;
+}
