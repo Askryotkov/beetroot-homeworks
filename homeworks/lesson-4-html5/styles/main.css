@@ -1,6 +1,4 @@
 * {
-  /* !REMOVE BEFORE SEND TO GIT */
-  /* border: 1px solid orange; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -48,7 +46,6 @@ h6 {
 }
 .navigation-list {
   list-style-type: none;
-  /* margin: 0 auto; */
 }
 .navigation-item {
   display: inline-block;

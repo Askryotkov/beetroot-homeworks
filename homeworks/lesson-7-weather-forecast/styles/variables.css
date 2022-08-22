@@ -1,0 +1,24 @@
+:root {
+  --c-backgroung: #3399cc;
+  --c-border: #2b81ac;
+  --c-border-table: #ffffff;
+  --c-text: #ffffff;
+  
+  /* *Fonts */
+  --f-s-cities: 22px;
+  --sun-pic: 28px;
+  --footer-text: 16px;
+
+  /* *Colors of backgrounds in weather table */
+  --lisbon: #3399cc;
+  --paris: #33cccc;
+  --belgrade: #996699;
+  --venice: #c24747;
+  --tel-aviv: #e2674a;
+  --cair: #ffcc66;
+  --new-york: #99cc99;
+  --new-delhi: #669999;
+  --san-francisco: #cc6699;
+  --tokyo: #339966;
+  --sydney: #666699;
+}

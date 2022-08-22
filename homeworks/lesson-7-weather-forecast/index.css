@@ -1,0 +1,131 @@
+.app {
+  border: 25px solid var(--c-border);
+  background: var(--c-backgroung);
+  min-height: 100vh;
+  height: 100%;
+}
+
+h1 {
+  display: inline-block;
+  color: var(--c-text);
+  font-size: 22px;
+}
+
+/* * Header */
+.header {
+  margin: 66px 135px 0px 135px;
+}
+.header-wrapper {
+  display: inline-block;
+}
+.weather-forecast {
+  display: inline-block;
+}
+
+/* *Icons styles */
+.wi {
+  font-size: var(--sun-pic);
+  display: inline-block;
+  color: var(--c-text);
+  margin-top: 6px;
+}
+.wi-sunrise {
+  margin-left: 4px;
+}
+
+/* *Weather table */
+
+.weather-table {
+  margin: 38px 135px 0px 135px;
+}
+
+/* List style */
+
+.cities {
+  border: 1px solid var(--c-border-table);
+  list-style-type: none;
+  color: var(--c-text);
+  font-size: 0px;
+}
+
+.medium {
+  border: 1px solid var(--c-border-table);
+  font-size: var(--f-s-cities);
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+.small {
+  border: 1px solid var(--c-border-table);
+  font-size: var(--f-s-cities);
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+}
+.big {
+  border: 1px solid var(--c-border-table);
+  font-size: var(--f-s-cities);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* *Cities backgrounds */
+.Lisbon {
+  background: var(--lisbon);
+}
+.paris {
+  background: var(--paris);
+}
+.belgrade {
+  background: var(--belgrade);
+}
+.venice {
+  background: var(--venice);
+}
+.tel-aviv {
+  background: var(--tel-aviv);
+}
+.cair {
+  background: var(--cair);
+}
+.new-york {
+  background: var(--new-york);
+}
+.new-delhi {
+  background: var(--new-delhi);
+}
+.san-francisco {
+  background: var(--san-francisco);
+}
+.tokyo {
+  background: var(--tokyo);
+}
+.sydney {
+  background: var(--sydney);
+}
+
+.padder {
+  padding: 26px 0px 26px 0px;
+  display: block;
+}
+
+/* * Hover effect */
+ul:hover li {
+  transition: all 0.8s ease;
+  opacity: 0.7;
+}
+
+ul:hover li:hover {
+  transition: all 0, 7s ease;
+  opacity: 1;
+}
+
+/* *Footer */
+.footer {
+  margin: 38px 135px 0px 135px;
+}
+.indification {
+  font-size: var(--footer-text);
+  color: var(--c-text);
+}

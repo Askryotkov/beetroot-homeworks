@@ -3,6 +3,9 @@
   display: inline-block;
   width: auto;
   margin-left: 20px;
+  padding: 5px;
+  border: 1px solid var(--border-map);
+  /* ? Box shadow */
 }
 
 /* *Contacts */
@@ -13,8 +16,8 @@
 .contacts {
   display: inline-block;
   vertical-align: top;
-  width: 70vh;
   margin-left: 10px;
+  width: 70vh;
   
 }
 

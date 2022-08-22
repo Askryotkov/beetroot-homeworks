@@ -1,0 +1,19 @@
+:root {
+  /* * Colors */
+  /* Backgrounds */
+  --c-background-main: #ffffff;
+  /* Background color About me */
+  --b-c-about-me: #F6F6F6;
+  /* *Text color */
+  --c-header-text: #828282;
+  --c-header-text-hover: #070707;
+  --c-title: #070707;
+  --c-skills: #828282;
+
+  /* *Font sizes */
+  --f-s-header: 18px;
+  --f-s-title: 48px;
+  --f-s-about-me: 34px;
+  --f-s-about-me-text: 18px;
+  --f-s-products: 14px;
+}

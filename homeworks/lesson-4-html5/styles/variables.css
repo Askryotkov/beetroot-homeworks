@@ -12,6 +12,8 @@
   --c-black: #131212;
   /* Borders color */
   --c-b-grey: #6f6f6f;
+  /* Border map */
+  --border-map: orange;
 
   /* *Fonts */
   --f-t-p-description: 30px;
