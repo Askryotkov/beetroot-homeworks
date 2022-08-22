@@ -108,6 +108,7 @@ h1 {
 .padder {
   padding: 26px 0px 26px 0px;
   display: block;
+  cursor: default;
 }
 
 /* * Hover effect */
