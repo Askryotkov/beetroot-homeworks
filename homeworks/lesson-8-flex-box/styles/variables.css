@@ -1,0 +1,40 @@
+:root {
+  /* * Colors */
+  /* Hover link color */
+  --c-orange: #ff9900;
+  /* Line */
+  --c-line: #bcd0e57f;
+  /* Input active */
+  --c-light-blue: #bcd0e5;
+
+  /* *Texts colors */
+  /* Color text header and titles */
+  --c-black: #2f281e;
+  /* Color Logo text */
+  --c-azure: #173a56;
+  /* White text */
+  --c-white: #ffffff;
+  /* h1 color */
+  --c-dark-brown: #2f281e;
+  /* Info text color */
+  --c-light-brown: #544837;
+
+
+  /* *Fonts */
+  --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-poppins: 'Poppins', sans-serif;
+
+  /* *Fonts sizes */
+  /* h1 font */
+  --fs-biggest: 44px;
+  /* Info text on first screen */
+  --fs-m-text: 18px;
+  /* Font size h2 */
+  --fs-big: 36px;
+  /* Features title */
+  --fs-titles: 22px;
+  /* Text info */
+  --fs-s-text: 16px;
+  /* Footer titles */
+  --fs-s-titles: 20px;
+}

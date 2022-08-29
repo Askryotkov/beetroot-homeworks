@@ -1,0 +1,126 @@
+/* * Header */
+.header-wrapper {
+  background-color: var(--c-grey);
+  padding: 20px 0px 15px 0px;
+  justify-content: center;
+  color: var(--c-coral);
+  display: flex;
+}
+/* Text */
+.header-text {
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+}
+.fat-text {
+  font-size: var(--fs-big-text);
+  font-family: "Roboto";
+  font-weight: 700;
+}
+.medium-text {
+  padding-top: 5px;
+}
+
+/* * List Box */
+.items-list-box {
+  justify-content: center;
+  display: flex;
+}
+.items-list-box-wrapper {
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+}
+/* List items */
+.list-items {
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 580px;
+}
+/* Label */
+.line {
+  background-color: var(--c-light-grey);
+  display: flex;
+}
+.line:nth-child(2n) {
+  background-color: var(--c-rhythm);
+}
+/* List item */
+.list-item {
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  color: var(--c-white);
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  cursor: default;
+  display: flex;
+  flex-grow: 1;
+  height: 45px;
+}
+.list-item:hover {
+  border-bottom: 3px solid var(--c-white);
+  border-top: 3px solid var(--c-white);
+  background-color: var(--c-dark-grey);
+  transition: var(--t-normal);
+}
+.list-item:active {
+  background-color: var(--c-coral);
+}
+/* Union */
+.union {
+  display: flex;
+}
+/* Text */
+.simple-text {
+  font-size: var(--fs-text);
+  font-family: "Roboto";
+  padding-left: 18px;
+}
+.small-text {
+  font-size: var(--fs-small-text);
+  font-family: "Roboto";
+  align-items: center;
+  padding-left: 6px;
+  display: flex;
+}
+.small-text::before {
+  content: "(";
+}
+.small-text::after {
+  content: ")";
+}
+/* Check box */
+.check-item {
+  accent-color: var(--c-white);
+  height: 20px;
+  width: 20px;
+}
+.check-item:checked + .simple-text {
+  text-decoration: line-through;
+  color: var(--c-smoke);
+}
+.check-item:checked + .union {
+  text-decoration: line-through;
+  color: var(--c-smoke);
+}
+
+/* * Footer */
+.footer-wrapper{
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.button-footer{
+  width: 540px;
+  height: 45px;
+  background-color: var(--c-graphite);
+  color: var(--c-coral);
+}
+.button-footer:hover{
+  background-color: var(--c-dark-grey);
+}

@@ -1,0 +1,23 @@
+:root {
+  /* * Colors */
+  --c-black: #000000;
+  --c-white: #ffffff;
+  --c-grey: #dadada;
+
+  /* * Font sizes */
+  --fs-small: 22px;
+  --fs-big: 36px;
+  --fs-small: 14px;
+  --fs-medium: 28px;
+
+  /* * Fonts */
+  --ff-staatliches: "Staatliches";
+  --ff-tourney: "Tourney";
+  --ff-francois-one: "Francois One";
+  --ff-farro: "Farro";
+  --ff-pt-sans: "PT Sans";
+
+  /* *Transition */
+  --b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-normal: 0.35s var(--b-normal);
+}

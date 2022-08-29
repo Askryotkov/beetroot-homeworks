@@ -1,0 +1,21 @@
+:root {
+  /* * Colors */
+  --c-mako: #3b3f45;
+  --c-grey: #4a4f56;
+  --c-coral: #ff8984;
+  --c-white: #ffffff;
+  --c-light-grey: #88839e;
+  --c-rhythm: #7a7593;
+  --c-dark-grey: #625e77;
+  --c-smoke: #9b96ac;
+  --c-graphite: #4a4f56;
+
+  /* * Font sizes */
+  --fs-big-text: 24px;
+  --fs-text: 18px;
+  --fs-small-text: 12px;
+
+  /* *Transition */
+  --b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-normal: 0.35s var(--b-normal);
+}
