@@ -52,6 +52,7 @@ h1 {
 }
 img {
   width: 100%;
+  display: flex;
 }
 
 /* *About me */
