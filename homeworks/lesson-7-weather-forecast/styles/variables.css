@@ -10,15 +10,15 @@
   --footer-text: 16px;
 
   /* *Colors of backgrounds in weather table */
-  --lisbon: #3399cc;
-  --paris: #33cccc;
-  --belgrade: #996699;
-  --venice: #c24747;
-  --tel-aviv: #e2674a;
-  --cair: #ffcc66;
-  --new-york: #99cc99;
-  --new-delhi: #669999;
-  --san-francisco: #cc6699;
-  --tokyo: #339966;
-  --sydney: #666699;
+  --c-blue: #3399cc;
+  --c-light-blue: #33cccc;
+  --c-purple: #996699;
+  --c-dark-orange: #c24747;
+  --c-orange: #e2674a;
+  --c-yellow: #ffcc66;
+  --c-light-green: #99cc99;
+  --c-sea-green: #669999;
+  --c-pink: #cc6699;
+  --c-green: #339966;
+  --c-dirty-purple: #666699;
 }

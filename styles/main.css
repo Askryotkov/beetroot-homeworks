@@ -13,9 +13,9 @@ h6 {
   margin: 0;
 }
 
-h1{
-  cursor: default;
-  color: var(--c-grey);
+h1 {
   font-family: var(--ff-raleway);
+  color: var(--c-grey);
   font-weight: 700;
+  cursor: default;
 }

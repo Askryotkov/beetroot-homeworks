@@ -72,37 +72,37 @@ h1 {
 
 /* *Cities backgrounds */
 .Lisbon {
-  background: var(--lisbon);
+  background: var(--c-blue);
 }
 .paris {
-  background: var(--paris);
+  background: var(--c-light-blue);
 }
 .belgrade {
-  background: var(--belgrade);
+  background: var(--c-purple);
 }
 .venice {
-  background: var(--venice);
+  background: var(--c-dark-orange);
 }
 .tel-aviv {
-  background: var(--tel-aviv);
+  background: var(--c-orange);
 }
 .cair {
-  background: var(--cair);
+  background: var(--c-yellow);
 }
 .new-york {
-  background: var(--new-york);
+  background: var(--c-light-green);
 }
 .new-delhi {
-  background: var(--new-delhi);
+  background: var(--c-sea-green);
 }
 .san-francisco {
-  background: var(--san-francisco);
+  background: var(--c-pink);
 }
 .tokyo {
-  background: var(--tokyo);
+  background: var(--c-green);
 }
 .sydney {
-  background: var(--sydney);
+  background: var(--c-dirty-purple);
 }
 
 .padder {
