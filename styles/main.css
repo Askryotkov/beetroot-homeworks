@@ -12,3 +12,10 @@ h6 {
   padding: 0;
   margin: 0;
 }
+
+h1{
+  cursor: default;
+  color: var(--c-grey);
+  font-family: var(--ff-raleway);
+  font-weight: 700;
+}

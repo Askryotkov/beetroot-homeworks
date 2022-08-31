@@ -1,0 +1,16 @@
+:root {
+    /* * Colors */
+    --c-black: #18191a;
+    --border-color: #e4e6eb;
+    --c-grey: #d5d2cc;
+    /* * Fonts */
+    /* Font */
+    --ff-raleway: 'Raleway', sans-serif;
+    /* Font-sizes */
+    --font-size-title: 20px;
+    --font-size-base: 16px;
+    --link-size: 18px;
+    /* *Transition */
+  --b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-normal: 0.35s var(--b-normal);
+  }

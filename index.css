@@ -1,44 +1,61 @@
-/* Main colors and fonts */
-:root {
-  --color-for-background: #18191a;
-  --border-color: #e4e6eb;
-  --text-color: #ccd0d5;
-  --link-color: #2e89ff;
-  --font-size-title: 20px;
-  --font-size-base: 16px;
-  --link-size: 18px;
-}
-
-/* Сolors assignment and font size*/
 .app {
-  background-color: var(--color-for-background);
   font-size: var(--font-size-base);
   color: var(--text-color);
   min-height: 100vh;
   padding: 20px;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    -45deg,
+    #3bade3 0%, 
+    #576fe6 25%, 
+    #9844b7 51%, 
+    #ff357f 100%
+  );
+  animation: AnimateBG 20s ease infinite;
 }
-
-/* move list right and add style */
-.move-right {
-  padding-left: 16px;
-  list-style: circle;
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* * List items */
+.list-item {
+  padding: 10px 0px;
 }
 /* All links size and color */
 .link {
+  transition: var(--t-normal);
   font-size: var(--link-size);
-  color: var(--link-color);
+  text-decoration: none;
+  color: var(--c-grey);
+}
+
+.link:hover {
+  color: var(--c-black);
 }
 /* Big size font for titles */
 .big-font {
   font-size: var(--font-size-title);
 }
 
-.txt-align{
+.txt-align {
   text-align: center;
 }
 
-li{
+.list-item {
+  font-family: var(--ff-raleway);
+  list-style-type: none;
   margin-top: 20px;
 }
