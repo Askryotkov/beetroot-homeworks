@@ -1,13 +1,11 @@
 :root {
-  --c-backgroung: #3399cc;
-  --c-border: #2b81ac;
-  --c-border-table: #ffffff;
-  --c-text: #ffffff;
+  --c-dark-blue: #2b81ac;
+  --c-white: #ffffff;
   
   /* *Fonts */
-  --f-s-cities: 22px;
-  --sun-pic: 28px;
-  --footer-text: 16px;
+  --fs-medium: 22px;
+  --fs-big: 28px;
+  --fs-small: 16px;
 
   /* *Colors of backgrounds in weather table */
   --c-blue: #3399cc;

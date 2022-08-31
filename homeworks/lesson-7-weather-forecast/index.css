@@ -1,13 +1,13 @@
 .app {
-  border: 25px solid var(--c-border);
-  background: var(--c-backgroung);
+  border: 25px solid var(--c-dark-blue);
+  background: var(--c-blue);
   min-height: 100vh;
   height: 100%;
 }
 
 h1 {
   display: inline-block;
-  color: var(--c-text);
+  color: var(--c-white);
   font-size: 22px;
 }
 
@@ -24,9 +24,9 @@ h1 {
 
 /* *Icons styles */
 .wi {
-  font-size: var(--sun-pic);
+  font-size: var(--fs-big);
   display: inline-block;
-  color: var(--c-text);
+  color: var(--c-white);
   margin-top: 6px;
 }
 .wi-sunrise {
@@ -42,29 +42,29 @@ h1 {
 /* List style */
 
 .cities {
-  border: 1px solid var(--c-border-table);
+  border: 1px solid var(--c-white);
   list-style-type: none;
-  color: var(--c-text);
+  color: var(--c-white);
   font-size: 0px;
 }
 
 .medium {
-  border: 1px solid var(--c-border-table);
-  font-size: var(--f-s-cities);
+  border: 1px solid var(--c-white);
+  font-size: var(--fs-medium);
   display: inline-block;
   text-align: center;
   width: 50%;
 }
 .small {
-  border: 1px solid var(--c-border-table);
-  font-size: var(--f-s-cities);
+  border: 1px solid var(--c-white);
+  font-size: var(--fs-medium);
   display: inline-block;
   text-align: center;
   width: 25%;
 }
 .big {
-  border: 1px solid var(--c-border-table);
-  font-size: var(--f-s-cities);
+  border: 1px solid var(--c-white);
+  font-size: var(--fs-medium);
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -127,6 +127,6 @@ ul:hover li:hover {
   margin: 38px 135px 0px 135px;
 }
 .indification {
-  font-size: var(--footer-text);
-  color: var(--c-text);
+  font-size: var(--fs-small);
+  color: var(--c-white);
 }
