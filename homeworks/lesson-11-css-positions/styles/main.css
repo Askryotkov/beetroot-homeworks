@@ -1,0 +1,49 @@
+* {
+/* border: 1px solid orange; */
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* *Body */
+body {
+  color: var(--c-black);
+  background-color: var(--c-white);
+}
+.app {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 1240px;
+  display: flex;
+}
+
+/* *Links */
+a {
+  text-decoration: none;
+  display: flex;
+}
+
+/* *Lists */
+ul {
+  list-style-type: none;
+}
+/* *Images */
+img {
+  display: flex;
+}

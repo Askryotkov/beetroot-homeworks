@@ -1,0 +1,31 @@
+:root {
+  --c-red: #ff545a9b;
+  --c-yellow: #ffce6d95;
+  --c-grey: #808391;
+  --c-dark-grey: #414453;
+
+/* * Circles box size */
+  --width: 600px;
+  --height: var(--width);
+
+  --c-s-big: calc(var(--width) / 3);
+  /* *Circles sizes */
+  /* Yellow circle */
+  /* --c-s-big: 200px; */
+  /* Radius */
+  --cirle-radius: calc(var(--c-s-big) / 2);
+
+  /* Circle size medium */
+  --c-s-medium: calc(var(--c-s-big) - 10%);
+
+  /* Circle size small */
+  --c-s-small: calc(var(--c-s-medium) - 10%);
+
+  /* *Circle positions */
+  --circle-position-medium: 13%;
+  --circle-position-small: calc(var(--circle-position-medium) / 2);
+}
+
+
+
+

@@ -1,0 +1,114 @@
+body {
+  background-color: var(--c-dark-grey);
+  display: flex;
+  height: 100vh;
+}
+
+.app {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.circles {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  width: var(--width);
+  height: var(--height) ;
+}
+
+/* Lines */
+.line {
+  background-color: var(--c-grey);
+  width: calc(90% - var(--cirle-radius));
+
+  position: absolute;
+  display: flex;
+  height: 6px;
+}
+.line-45 {
+  transform: rotate(45deg);
+}
+.line-90 {
+  transform: rotate(90deg);
+}
+.line-135 {
+  transform: rotate(135deg);
+}
+.line--small {
+  width: calc(80% - 50px);
+}
+
+/* Big yellow circle */
+.circle-big {
+  background-color: var(--c-yellow);
+  height: var(--c-s-big);
+  width: var(--c-s-big);
+  border-radius: 40%;
+  position: absolute;
+  z-index: 3;
+}
+.circle-big:hover{
+  transform: rotate(720deg);
+  opacity: 0,3;
+}
+
+/* Circle medium */
+.circle-medium {
+  width: var(--c-s-medium);
+  height: var(--c-s-medium);
+  background-color: var(--c-red);
+  border-radius: 50%;
+}
+.circle--medium-135-top {
+  position: absolute;
+  left: var(--circle-position-medium);
+  top: var(--circle-position-medium);
+}
+
+.circle--medium-45-top {
+  position: absolute;
+  right: var(--circle-position-medium);
+  top: var(--circle-position-medium);
+}
+
+.circle--medium-135-bottom {
+  position: absolute;
+  right: var(--circle-position-medium);
+  bottom: var(--circle-position-medium);
+}
+
+.circle--medium-45-bottom {
+  position: absolute;
+  bottom: var(--circle-position-medium);
+  left: var(--circle-position-medium);
+}
+
+/* Circle small */
+.circle-small {
+  width: var(--c-s-small);
+  height: var(--c-s-small);
+  background-color: var(--c-red);
+  border-radius: 50%;
+}
+
+.circle--small-top {
+  position: absolute;
+  top: var(--circle-position-small);
+}
+.circle--small-right {
+  position: absolute;
+  right: var(--circle-position-small);
+}
+.circle--small-bottom {
+  position: absolute;
+  bottom: var(--circle-position-small);
+}
+.circle--small-left {
+  position: absolute;
+  left: var(--circle-position-small);
+}

@@ -1,0 +1,202 @@
+body {
+  background-color: var(--c-dark-grey);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 1200px;
+  height: 100vh;
+  margin: 20px;
+}
+
+/* * Circles */
+.circles {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  min-width: var(--box-width);
+  min-height: var(--box-height);
+  transition: var(--t-normal);
+  z-index: 5;
+}
+
+/* Big Yellow circle */
+.circle-big {
+  background-color: var(--c-yellow);
+  transition: var(--t-spin);
+  justify-content: center;
+  height: var(--c-s-big);
+  width: var(--c-s-big);
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  z-index: 18;
+}
+.circle-big:hover {
+  background-color: var(--c-purple);
+  transform: rotate(720deg);
+  border-radius: 30%;
+}
+.circle-big:hover ~ div {
+  transform: rotate(720deg);
+  cursor: pointer;
+}
+
+/* *Text */
+.text {
+  cursor: default;
+  font-family: var(--ff-overpass);
+}
+.text-small{
+  font-size: 10px;
+}
+
+/* Circle medium */
+.circle-medium {
+  background-color: var(--c-red);
+  transition: var(--t-normal);
+  height: var(--c-s-medium);
+  width: var(--c-s-medium);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle--medium-135-top {
+  left: var(--circle-position-medium);
+  top: var(--circle-position-medium);
+}
+.circle--medium-135-top:hover {
+  left: var(--circle-position--medium-hover);
+  top: var(--circle-position--medium-hover);
+}
+.circle--medium-135-top:hover ~ div.line-45 {
+  width: var(--line-small--width-hover);
+  background-color: var(--c-pink);
+}
+
+.circle--medium-45-top {
+  right: var(--circle-position-medium);
+  top: var(--circle-position-medium);
+}
+.circle--medium-45-top:hover {
+  right: var(--circle-position--medium-hover);
+  top: var(--circle-position--medium-hover);
+}
+.circle--medium-45-top:hover ~ div.line-135 {
+  width: var(--line-small--width-hover);
+  background-color: var(--c-dark-blue);
+}
+
+.circle--medium-135-bottom {
+  bottom: var(--circle-position-medium);
+  right: var(--circle-position-medium);
+}
+.circle--medium-135-bottom:hover {
+  bottom: var(--circle-position--medium-hover);
+  right: var(--circle-position--medium-hover);
+}
+.circle--medium-135-bottom:hover ~ div.line-45 {
+  width: var(--line-small--width-hover);
+  background-color: var(--c-bright-yellow);
+}
+
+.circle--medium-45-bottom {
+  bottom: var(--circle-position-medium);
+  left: var(--circle-position-medium);
+}
+.circle--medium-45-bottom:hover {
+  bottom: var(--circle-position--medium-hover);
+  left: var(--circle-position--medium-hover);
+}
+.circle--medium-45-bottom:hover ~ div.line-135 {
+  width: var(--line-small--width-hover);
+  background-color: var(--c-green);
+}
+
+/* Circle small */
+.circle-small {
+  background-color: var(--c-red);
+  transition: var(--t-normal);
+  height: var(--c-s-small);
+  width: var(--c-s-small);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle--small-top {
+  font-size: 15px;
+  justify-content:center ;
+  align-items: center;
+  display: flex;
+  top: 0;
+}
+.circle--small-top:hover {
+  top: var(--circle-position--small-hover);
+  opacity: 0.5;
+}
+.circle--small-top:hover ~ .line-90 {
+  width: var(--line-medium-width-hover);
+  background-color: var(--c-orange);
+}
+
+.circle--small-right {
+  right: 0;
+}
+.circle--small-right:hover {
+  right: var(--circle-position--small-hover);
+}
+.circle--small-right:hover ~ .line-0 {
+  width: var(--line-medium-width-hover);
+  background-color: var(--c-bright-red);
+}
+.circle--small-bottom {
+  bottom: 0;
+}
+.circle--small-bottom:hover {
+  bottom: var(--circle-position--small-hover);
+}
+.circle--small-bottom:hover ~ .line-90 {
+  width: var(--line-medium-width-hover);
+  background-color: var(--c-light-blue);
+}
+.circle--small-left {
+  left: 0;
+}
+.circle--small-left:hover {
+  left: var(--circle-position--small-hover);
+}
+.circle--small-left:hover ~ .line-0 {
+  width: var(--line-medium-width-hover);
+  background-color: var(--c-purple);
+}
+
+/* * Lines */
+.line {
+  background-color: var(--c-grey);
+  width: var(--line-small-width);
+  transition: var(--t-normal);
+  position: absolute;
+  display: flex;
+  height: 6px;
+  z-index: -1;
+}
+.line-45 {
+  transform: rotate(45deg);
+}
+.line-90 {
+  transform: rotate(90deg);
+}
+.line-135 {
+  transform: rotate(135deg);
+}
+.line--medium {
+  width: var(--line-medium-width);
+}

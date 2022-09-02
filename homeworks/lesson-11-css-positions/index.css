@@ -64,10 +64,20 @@
   justify-content: center;
   display: flex;
   width: 100%;
+  position: relative;
 }
 .main-page-wrapper{
   padding-top: 85px;
 }
+/* Background */
+.background-test{
+  position: absolute;
+  right: 0;
+  z-index: -1;
+
+}
+
+
 
 /* Chapter 1 */
 .chapters{

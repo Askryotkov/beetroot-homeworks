@@ -1,0 +1,60 @@
+:root {
+  /* * Colors */
+  --c-red: #ff545a;
+  --c-yellow: #ffce6d;
+  --c-green: #2a9134;
+  --c-grey: #808391;
+  --c-dark-grey: #414453;
+  --c-pink: #feeafa;
+  --c-orange: #ff7f11;
+  --c-bright-red: #ff1b1c;
+  --c-light-blue: #25ced1;
+  --c-purple: #6d58d4;
+  --c-dark-blue: #083d77;
+  --c-bright-yellow: #ffda22;
+
+  /* *Font */
+  --ff-overpass: "Overpass Mono", monospace;
+
+  /* * Circles box size */
+  --box-width: 600px;
+  --box-height: 600px;
+
+  /* *Circles sizes */
+  /* Yellow circle */
+  --c-s-big: 200px;
+  /* Red Circle size medium */
+  --c-s-medium: 125px;
+  /* Red Circle size  small */
+  --c-s-small: 102px;
+
+  /* * Radiuses */
+  /* Red circle small */
+  --circle-radius-small: calc(var(--c-s-small) / 2);
+  /* Red circle medium */
+  --cirle-radius-medium: calc(var(--c-s-medium) / 2);
+
+  /* *Lines */
+  /* Line small */
+  --line-small-width: calc(90% - var(--circle-radius-small));
+  --line-small--width-hover: calc(var(--line-small-width) - 15%);
+  /* Line medium */
+  --line-medium-width: calc(95% - var(--cirle-radius-medium));
+  --line-medium-width-hover: calc(var(--line-medium-width) - 18.2%);
+
+  /* *Circle positions */
+  --circle-position-medium: 10%;
+  --circle-position-small: calc(var(--circle-position-medium) / 2);
+
+  /* Circle positions hover */
+  --circle-position--medium-hover: calc(var(--circle-position-medium) + 10.5%);
+  --circle-position--small-hover: calc(var(--circle-position-small) + 11.6%);
+
+  /* * Transitions */
+  --b-normal: cubic-bezier(0, -0.29, 0.43, -0.56);
+  --t-normal: 2s var(--b-normal);
+
+  /* Spin Yellow circle */
+  --b-spin: cubic-bezier(0.2, 1, 0.63, 1.38);
+  --t-spin: 5s var(--b-spin);
+}
