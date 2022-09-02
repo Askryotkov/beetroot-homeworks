@@ -44,11 +44,12 @@ body {
   background-color: var(--c-purple);
   transform: rotate(720deg);
   border-radius: 30%;
+  color: var(--c-bright-yellow);
 }
 .circle-big:hover ~ div {
   transform: rotate(720deg);
-  cursor: pointer;
 }
+
 
 /* *Text */
 .text {
