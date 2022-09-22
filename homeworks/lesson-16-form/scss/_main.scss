@@ -31,10 +31,11 @@ body{
 
 a{
   text-decoration: none;
+  color: $c-blue;
 }
 a:visited{
-  text-decoration: none;
   color: $c-blue;
+  text-decoration: none;
 }
 
 img{

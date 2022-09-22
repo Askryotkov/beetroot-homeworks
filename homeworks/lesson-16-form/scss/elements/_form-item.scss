@@ -17,6 +17,11 @@
     
   }
   
+  &__description{
+    font-size: em(12);
+    padding-top: 5px;
+    color: $c-grey;
+  }
   
   &__error{
     text-align: right;

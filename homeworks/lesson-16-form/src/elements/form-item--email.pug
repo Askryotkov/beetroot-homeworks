@@ -1,0 +1,8 @@
+mixin formItem--email(text, name, placeholder, type="text", classes='form__input')
+  .form
+    label.form__item
+      if text 
+        .form__title=text
+      input(name=name, type=type, class=classes, placeholder=placeholder, required)
+      .form__description We'll never share your email with anyone else.
+      .form__error Error, please refill the form

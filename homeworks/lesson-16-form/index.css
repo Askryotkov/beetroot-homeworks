@@ -342,11 +342,12 @@ body {
 
 a {
   text-decoration: none;
+  color: #007BFF;
 }
 
 a:visited {
-  text-decoration: none;
   color: #007BFF;
+  text-decoration: none;
 }
 
 img {
@@ -448,6 +449,11 @@ img {
   height: 38px;
   width: 100%;
 }
+.form__description {
+  font-size: 0.8em;
+  padding-top: 5px;
+  color: #969696;
+}
 .form__error {
   text-align: right;
   right: 5px;
@@ -492,13 +498,18 @@ img {
   font-size: 15px;
 }
 
-.simple-button {
-  width: 100%;
-  background: #007BFF;
+.button {
   border: 1px solid #E4E4E4;
+  background: #007BFF;
   border-radius: 6px;
-  height: 38px;
   color: #ffffff;
+  cursor: pointer;
+  width: 150px;
+  height: 38px;
+}
+
+.button--full {
+  width: 100%;
 }
 
 .file {
@@ -543,6 +554,7 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
+  cursor: pointer;
   display: flex;
   height: 30px;
   width: 30px;
@@ -551,4 +563,9 @@ img {
   position: absolute;
   width: 16px;
   height: 16px;
+}
+
+.forms__button--profile {
+  padding-bottom: 35px;
+  padding-top: 10px;
 }/*# sourceMappingURL=index.css.map */

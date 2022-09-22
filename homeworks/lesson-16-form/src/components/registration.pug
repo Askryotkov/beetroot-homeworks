@@ -11,7 +11,7 @@ mixin registration()
         //- Last name
         +formItem('Last Name', 'last-name', 'Please, write your surname')
       //- E-mail
-      +formItem('E-mail', 'e-mail', 'Please, write your e-mail')
+      +formItem--email('E-mail', 'e-mail', 'Please, write your e-mail')
       //- Gender
       .forms__gender 
         +formItem--radio('Male', 'gender', 'radio', ' form__input--radio', 'male')
@@ -22,7 +22,7 @@ mixin registration()
         +formItem('City', 'cities', 'Please, write your city')
       //- Button
       .forms__button 
-        +button('Sing Up', 'submit')
+        +button('Sing Up', 'submit', 'button--full')
       //- Description
       .forms__description
         .forms__description__wrapper

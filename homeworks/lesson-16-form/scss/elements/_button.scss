@@ -1,9 +1,13 @@
-.simple-button {
-  width: 100%;
-  // max-width: 500px;
-  background: $c-blue;
+.button {
   border: 1px solid $c-almost-white;
+  background: $c-blue;
   border-radius: 6px;
-  height: 38px;
   color: $c-white;
+  cursor: pointer;
+  width: 150px;
+  height: 38px;
+}
+
+.button--full{
+  width: 100%;
 }
