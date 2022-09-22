@@ -1,0 +1,49 @@
+* {
+  //  TODO Remove before load to git
+  // border: 1px solid orange;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-size: em(24);
+  font-weight: 500;
+  color: $c-black;
+}
+
+body{
+  background-color: $c-light-grey;
+  font-size: $fs-base + px;
+  font-family: $ff-roboto;
+  color: $c-dark-grey;
+  
+}
+
+a{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+  color: $c-blue;
+}
+
+img{
+  width: 100%;
+}
+
+.wrapper{
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
+  display: flex;
+}

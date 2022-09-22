@@ -1,0 +1,67 @@
+.footer {
+  background-color: $c-grey-100;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $c-black;
+  height: 300px;
+  display: flex;
+  margin-top: 90px;
+
+  &__wrapper {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  &__title {
+    font-family: $ff-red-hat-display;
+    letter-spacing: 0.05em;
+    font-size: em(48);
+    font-weight: 300;
+  }
+
+  &__contacts {
+    padding-top: 15px;
+
+    &:first-child {
+      padding-top: 30px;
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__icon {
+    @include size(50);
+    border: 1px solid $c-grey-700;
+    justify-content: center;
+    transition: $t-normal;
+    align-items: center;
+    margin-right: 25px;
+    display: flex;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon:hover {
+    cursor: pointer;
+    background-color: $c-grey-700;
+  }
+
+  &__icon:hover path {
+    fill: $c-white;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__info {
+    bottom: 30px;
+    position: absolute;
+  }
+}

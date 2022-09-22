@@ -1,0 +1,25 @@
+//  * Generate Em
+@function em($px){
+  @return $px / $fs-base + em;
+}
+
+// * Generate Size
+@mixin size($px){
+  width: $px + px;
+  height: $px + px;
+}
+
+// * Fonts
+@mixin font-face($font-name,$fontfile,$fontweight: normal,$fontstyle: normal
+) {
+  @font-face {
+    font-family: $font-name;
+    src: url("./assets/fonts/" + $fontfile + ".eot");
+    src: url("./assets/fonts/" + $fontfile + ".eot?#iefix"),
+        format("embedded-opentype"),
+          url("./assets/fonts/" + $fontfile + ".woff"), format("woff"),
+          url("./assets/fonts/" + $fontfile + ".ttf"), format("truetype");
+    font-weight: $fontweight;
+    font-style: $fontstyle;
+  }
+}

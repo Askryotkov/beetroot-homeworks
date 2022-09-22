@@ -1,0 +1,17 @@
+.photo{
+  border-right: $bsz-bs;
+  padding-bottom: 65px;
+  padding-top: 65px;
+  width: 50%;
+  
+  &__wrapper{
+    position: relative;
+    max-width: 430px;
+    display: flex;
+    padding: 15px;
+  }
+  &__portatrait{
+    max-width: 400px;
+    display: flex;
+  }
+}

@@ -1,0 +1,5 @@
+mixin formItem--radio(text, name, type="text", classes='form__input', value='male')
+    label.form__item--radio
+      input(name=name, type=type, class=classes, value=value)
+      span.form__text=text
+      //- .form__error Choose your gender

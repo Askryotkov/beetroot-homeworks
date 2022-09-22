@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+  padding: 15px;
+
+  &__wrapper {
+    border-bottom: 1px solid $c-yellow;
+    flex-direction: column;
+    padding-bottom: 50px;
+    align-items: center;
+    padding-top: 120px;
+    text-align: center;
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+
+    &__title {
+      color: $c-yellow;
+      margin-top: 15px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    width: 20px;
+    bottom: 0px;
+  }
+}

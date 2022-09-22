@@ -1,9 +1,7 @@
 body {
+  /* !Check it */
   background-color: var(--c-dark-grey);
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .app {
@@ -133,9 +131,9 @@ body {
 }
 
 .circle--small-top {
-  font-size: 15px;
   justify-content:center ;
   align-items: center;
+  font-size: 15px;
   display: flex;
   top: 0;
 }

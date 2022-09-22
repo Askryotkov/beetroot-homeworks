@@ -40,11 +40,21 @@
               <nav class="navigation">
                 <ul class="navigation-items">
                   <li class="navigation-item">
-                    <a href="#" class="navigation-link">Documentation</a>
+                    <a
+                      href="./index.html"
+                      class="navigation-link"
+                      title="Refresh"
+                      >Documentation</a
+                    >
                   </li>
                   <li class="navigation-item navigation-symbol">/</li>
                   <li class="navigation-item">
-                    <a href="#" class="navigation-link">Who's using</a>
+                    <a
+                      href="./pages/who-s-using.html"
+                      class="navigation-link"
+                      title="Who's using"
+                      >Who's using</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -61,39 +71,54 @@
         </div>
       </header>
 
-      
       <!-- * Main page -->
-      <div class="wrapper main-page">
-
+      <div class="wrapper full-page">
         <!-- * Side bar -->
         <div class="side-bar-navigation-blok">
           <nav class="side-bar-navigation">
             <ul class="side-bar-navigation-items">
               <li class="side-bar-navigation-item">
-                <a href="#" class="navigation-link"><span class="big-title">INTRODUCTION</span></a>
+                <a href="#top" class="navigation-link-side-bar" title="Go to Chapter 1"
+                  ><span class="big-title big--title-side-bar"
+                    >INTRODUCTION</span
+                  ></a
+                >
               </li>
               <li class="side-bar-navigation-item">
-                <a href="#" class="navigation-link"><span class="big-title">CORE COMPONENTS</span></a>
+                <a href="#chapter-2" class="navigation-link-side-bar" title="Go to Chapter 2"
+                  ><span class="big-title big--title-side-bar"
+                    >CORE COMPONENTS</span
+                  ></a
+                >
               </li>
               <li class="side-bar-navigation-item">
-                <a href="#" class="navigation-link"><span class="big-title">REACT FUNDAMENTALS</span></a>
+                <a href="#chapter-3" class="navigation-link-side-bar" title="Go to Chapter 3"
+                  ><span class="big-title big--title-side-bar"
+                    >REACT FUNDAMENTALS</span
+                  ></a
+                >
               </li>
               <li class="side-bar-navigation-item">
-                <a href="#" class="navigation-link"><span class="big-title">HANDLING TEXT INPUT</span></a>
+                <a href="#chapter-4" class="navigation-link-side-bar" title="Go to Chapter 4"
+                  ><span class="big-title big--title-side-bar"
+                    >HANDLING TEXT INPUT</span
+                  ></a
+                >
               </li>
             </ul>
           </nav>
         </div>
-
-        <!-- Background image -->
-        <div class="background-test">
-          <img src="./assets/images/bg-picture.svg" alt="Setting img">
-        </div>
-        
         <!-- Main page wrapper -->
-        <div class="main-page-wrapper">
+        <div id="top" class="full-page-wrapper">
+          <!-- Background image -->
+          <div class="background-img">
+            <img src="./assets/images/bg-picture.svg" alt="Setting img" />
+          </div>
           <!-- Chapter 1 -->
-          <div class="chapters">
+          <div class="chapters chapters-relative">
+
+            <div class="separator-wrapper"><div class="separator"></div></div>
+            <!-- Titles -->
             <div class="titles">
               <span class="big-title">INTRODUCTION</span>
               <span class="chapter">Chapter 1</span>
@@ -107,7 +132,9 @@
             </p>
           </div>
           <!-- Chapter 2 -->
-          <div class="chapters">
+          <div id="chapter-2" class="chapters">
+            <div class="separator-wrapper"><div class="separator"></div></div>
+            <!-- Titles -->
             <div class="titles">
               <span class="big-title">CORE COMPONENTS</span>
               <span class="chapter">Chapter 2</span>
@@ -126,7 +153,9 @@
             </p>
           </div>
           <!-- Chapter 3 -->
-          <div class="chapters">
+          <div id="chapter-3" class="chapters">
+            <div class="separator-wrapper"><div class="separator"></div></div>
+            <!-- Titles -->
             <div class="titles">
               <span class="big-title">REACT FUNDAMENTALS</span>
               <span class="chapter">Chapter 3</span>
@@ -180,7 +209,9 @@
             </p>
           </div>
           <!-- Chapter 4 -->
-          <div class="chapters">
+          <div id="chapter-4" class="chapters">
+            <div class="separator-wrapper"><div class="separator"></div></div>
+            <!-- Titles -->
             <div class="titles">
               <span class="big-title">HANDLING TEXT INPUT</span>
               <span class="chapter">Chapter 4</span>
@@ -193,7 +224,12 @@
               onSubmitEditing prop that takes a function to be called when the
               text is submitted.
             </p>
-            <p class="simple-text">For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated as "🍕 🍕".</p>
+            <p class="simple-text">
+              For example, let's say that as the user types, you're translating
+              their words into a different language. In this new language, every
+              single word is written the same way: 🍕. So the sentence "Hello
+              there Bob" would be translated as "🍕 🍕".
+            </p>
           </div>
           <!-- Footer -->
         </div>

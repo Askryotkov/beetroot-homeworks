@@ -1,0 +1,21 @@
+.form__region{
+padding-top: 20px;
+  &__item--country{
+    padding-top: 20px;
+
+  }
+  
+}
+
+.countries{
+  border: 1px solid $c-almost-white;
+  border-radius: 6px;
+  padding-left: 10px;
+  max-width: 500px;
+  margin-top: 7px;
+  height: 38px;
+  width: 100%;
+  font-size: $fs-base + px;
+  
+}
+  

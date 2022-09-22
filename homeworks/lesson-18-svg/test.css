@@ -1,0 +1,72 @@
+:root{
+  --c-black: black;
+  --c-purple: purple;
+  --c-orange: orange;
+  --c-white: white;
+}
+
+.svg{
+  width: 100px;
+  height: 20px;
+  fill: red;
+}
+
+.svg:hover{
+  fill:green;
+}
+
+.black{
+  fill: black;
+}
+
+
+.grey{
+  fill: grey;
+}
+.grey:hover{
+  fill: orange;
+  
+}
+.white{
+  fill: white;
+}
+.test:hover .white{
+  fill:red;
+}
+
+.test:hover .grey{
+  fill: orange;
+}
+.test:hover .black{
+  fill: purple;
+
+}
+
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-saleforse-logo-black-1{
+  font-size: 100px;
+}
+.icon-saleforse-logo-black-1:hover{
+  fill: var(--c-purple);
+}
+.icon-saleforse-logo-black-1:hover .colorized{
+  fill: orange;
+}
+
+.icon-wixcom-logo-black-1{
+  font-size: 100px;
+  
+}
+
+.icon-pinterest-logo-black-1{
+  font-size: 100px;
+}

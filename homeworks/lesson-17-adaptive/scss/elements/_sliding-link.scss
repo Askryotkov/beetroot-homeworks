@@ -1,0 +1,30 @@
+.sliding-link {
+  transition: $t-normal;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &:hover .sliding-link__icon {
+    transform: translate(90px);
+  }
+  &__info {
+    transition: $t-normal;
+    position: absolute;
+    color: $c-black;
+    opacity: 0;
+  }
+
+  &__icon {
+    transition: $t-normal;
+    position: absolute;
+    width: 24px;
+  }
+  &:hover .sliding-link__info {
+    opacity: 1;
+  }
+  &:hover path {
+    fill: $c-black;
+  }
+}

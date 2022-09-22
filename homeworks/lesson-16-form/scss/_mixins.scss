@@ -1,0 +1,16 @@
+//  * Generate Em
+@function em($px){
+  @return $px / $fs-base + em;
+}
+
+// * Generate Size
+@mixin size($px){
+  width: $px + px;
+  height: $px + px;
+}
+
+// * Generate Rectangle
+@mixin rectangle($wi, $he){
+  width: $wi + px;
+  height: $he + px;
+}

@@ -1,0 +1,127 @@
+include ./src/components/index
+include ./src/elements/index
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    //- TODO Icon
+    link(rel='icon' type='image/x-icon' href='./favicon.ico')
+    //- * Styles
+    link(rel="stylesheet" href="index.css")
+    title Adaptive 
+  body 
+    .app 
+      //- * Header
+      +header 
+      //- *Banner
+      .banner 
+        .banner__wrapper
+          +photo({
+          width: '1440',
+          photo: './assets/images/bg-image.jpg',
+          atl: 'Building photo'
+          })
+          h1.banner__title Manifest is a newborn theme. Clean, simple and fast.
+      //- * Content
+      .content 
+        .wrapper.content__wrapper
+          h2.content__title Blog
+          +content-item({
+            img: './assets/images/arrow.jpg',
+            alt: 'Arrow',
+            subtitle: 'Technology, Interface Design',
+            title: 'Using UX Design to Build a Sustainable Future',
+            date: '6 May, 2020',
+            description: 'Transformation has to be driven by everybody, not just by climate groups, and we have a responsibility to use our influence to drive this.'
+            })
+          +content-item({
+            reverseMode: true,
+            img: './assets/images/building.jpg',
+            alt: 'building',
+            subtitle: 'Technology, Interface Design',
+            title: 'Using UX Design to Build a Sustainable Future',
+            date: '6 May, 2020',
+            description: 'Transformation has to be driven by everybody, not just by climate groups, and we have a responsibility to use our influence to drive this.'
+          })
+      //- Posts block
+      .content 
+        .wrapper.content__wrapper
+          +heading({title: 'Latest Posts'})
+          .content__block 
+            +content-item({
+              
+              modifier: true,
+              img: './assets/images/lamp.jpg',
+              alt: 'Lamp',
+              subtitle: 'Interface Design',
+              title: 'UX traffic light colours',
+              date: '8 June, 2020',
+              description: 'UI has to make a huge visual difference between warning, an alert and a success.'
+              })
+            +content-item({
+              class: 'c-content-item--modified',
+              modifier: true,
+              img: './assets/images/arrow-medium.jpg',
+              alt: 'Arrow',
+              subtitle: 'Technology',
+              title: 'Using UX Design to Build a Sustainable Future',
+              date: '6 May, 2020',
+              description: 'UI has to make a huge visual difference between warning, an alert and a success.'
+              })
+            +content-item({
+              modifier: true,
+              img: './assets/images/roof.jpg',
+              alt: 'Roof',
+              subtitle: 'Visual Design',
+              title: 'Creativity vs. UX',
+              date: '8 June, 2020',
+              description: 'Is it possible to create a delightful user experience without following best UX practices?'
+              })
+      //- Most popular
+      .content
+        .wrapper.content__wrapper
+          +heading({title: 'The Most Popular'})
+          .content__block.content__block--modified
+            +content-item({
+              modifier: true,
+              modifierMedium: true,
+              img: './assets/images/yellow-lamp.jpg',
+              alt: 'Yellow lamp',
+              subtitle: 'Interface Design',
+              title: 'Mentorship Match — How a simple LinkedIn feature can boost diversity',
+              date: '8 June, 2020',
+              description: 'LinkedIn is on a clear mission to make professionals more successful by connecting the global workforce and as we learned — diversity and success go hand in hand'
+              })
+            +content-item({
+              modifier: true,
+              modifierMedium: true,
+              img: './assets/images/wall.jpg',
+              alt: 'Blue wall',
+              subtitle: 'Visual Design',
+              title: 'Creativity vs. UX',
+              date: '8 June, 2020',
+              description: 'Is it possible to create a delightful user experience without following best UX practices?'
+              })
+          .content__button 
+            +button({text:'Load more'})
+      //- Info block
+      .content 
+        .wrapper.content__wrapper
+          .content__info-block 
+            .content__info-item 
+              h4.content__info-item__title 
+                | Full-time UI/UX designer
+                br
+                | Head of Design at VeronaLabs.com
+              +sliding-link
+            .content__info-item
+              span.content__text We work with clients around the world from our headquarters in Charleston, South Carolina.
+              span.content__text We focus on naming, branding, brand narratives, website design and development, and brand experiences.
+      //- * Footer
+      +footer()
+
+//- Scripst
+script(src='./index.js')

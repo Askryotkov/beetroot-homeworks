@@ -1,0 +1,9 @@
+mixin photo(args={})
+  - let styles = ''
+  - args.width ? styles += `max-width:${args.width}px` : null
+
+  .e-photo(style=styles)
+    if args.photo, args.alt
+      img.e-photo__img(src=args.photo, alt=args.alt)
+    else 
+      img.e-photo__img(src=args.photo, alt='photo')

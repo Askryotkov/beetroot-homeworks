@@ -1,0 +1,24 @@
+mixin profile()
+  form(method='get').forms
+    .forms__wrapper 
+      //- Form head
+      .forms__head 
+        h1.form__title Profile 
+      //- Photo
+      .forms__photo 
+        .forms__portrait
+          img(src="./assets/images/xzibit.png" alt="Photo").forms__img
+        +formItem--file
+        +buttonReset
+      //- User name
+      .forms__union
+        +formItem('Name', 'user-name', 'Enter the name')
+        +formItem('E-mail', 'e-mail', 'Please, write your e-mail')
+      //- Region
+      .forms__union 
+        +formItem--country
+        +formItem('City', 'cities', 'Please, write your city')
+      //- Contacts
+      .forms__union
+        +formItem('Zip Code', 'zip-code', 'Enter Zip Code')
+        +formItem('Phone Number', 'tel-numb', 'Enter your tel. number', 'tel')

@@ -51,10 +51,12 @@
   --circle-position--small-hover: calc(var(--circle-position-small) + 11.6%);
 
   /* * Transitions */
-  --b-normal: cubic-bezier(0, -0.29, 0.43, -0.56);
+  --b-normal:cubic-bezier(0, -0.29, 0.43, -0.56);
   --t-normal: 2s var(--b-normal);
 
   /* Spin Yellow circle */
   --b-spin: cubic-bezier(0.2, 1, 0.63, 1.38);
   --t-spin: 5s var(--b-spin);
 }
+
+/* cubic-bezier(0, -0.29, 0.43, -0.56); */

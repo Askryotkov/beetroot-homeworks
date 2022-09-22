@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- * Styles -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <!-- Variables -->
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <!-- Main -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- Elements -->
+    <link rel="stylesheet" href="./pages/elements.css" />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./index.css" />
+    <title>Lesson 13 - BEM</title>
+  </head>
+  <body>
+    <!-- * Icons -->
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-logo" viewbox="0 0 32 32">
+          <path
+            fill="#000"
+            style="fill: var(--color1, #000)"
+            d="M18.545 4.305l-2.491 2.824-4.368-3.818 2.491-2.824 4.368 3.818z"
+          ></path>
+          <path
+            fill="#2e8fe7"
+            style="fill: var(--color2, #2e8fe7)"
+            d="M24.755 17.627l7.245 6.331-5.070 5.747-8.509-7.436 5.070-5.747 1.264 1.104z"
+          ></path>
+          <path
+            fill="#2d3dcc"
+            style="fill: var(--color3, #2d3dcc)"
+            d="M18.37 24.865l1.595 1.394-3.859 4.374-2.859-2.498 3.859-4.374 1.264 1.105z"
+          ></path>
+          <path
+            fill="#1578d3"
+            style="fill: var(--color4, #1578d3)"
+            d="M26.342 13.291l1.082-1.227 2.859 2.498-2.491 2.824-1.595-1.394 1.409-1.597-1.264-1.104zM26.197 15.992l-1.264-1.104 1.409-1.597 1.264 1.104-1.409 1.597z"
+          ></path>
+          <path
+            fill="#2fd6ff"
+            style="fill: var(--color5, #2fd6ff)"
+            d="M5.212 19.421l-0.843 0.956-4.369-3.818 3.859-4.374 4.369 3.818-3.016 3.419z"
+          ></path>
+          <path
+            fill="#1578d3"
+            style="fill: var(--color4, #1578d3)"
+            d="M14.613 8.764l-5.070 5.747-8.484-7.414 5.070-5.747 8.484 7.414z"
+          ></path>
+          <path
+            fill="#94eaff"
+            style="fill: var(--color6, #94eaff)"
+            d="M17.464 5.532l-1.409 1.597-4.369-3.818 2.491-2.824 4.369 3.818-1.082 1.227z"
+          ></path>
+          <path
+            fill="#18b5dc"
+            style="fill: var(--color7, #18b5dc)"
+            d="M8.497 31.89l-7.163-6.307 22.425-25.474 7.379 6.118-22.64 25.663z"
+          ></path>
+        </symbol>
+        <symbol id="icon-telegram" viewbox="0 0 32 32">
+          <path
+            d="M31.909 5.094l-4.829 22.629c-0.364 1.597-1.314 1.994-2.665 1.242l-7.358-5.388-3.55 3.393c-0.393 0.39-0.722 0.717-1.479 0.717l0.529-7.446 13.637-12.244c0.593-0.525-0.128-0.816-0.921-0.291l-16.859 10.548-7.258-2.257c-1.579-0.49-1.607-1.569 0.329-2.321l28.388-10.867c1.314-0.49 2.465 0.291 2.036 2.286z"
+          ></path>
+        </symbol>
+        <symbol id="icon-linkedin" viewbox="0 0 32 32">
+          <path
+            d="M7.163 32h-6.634v-21.364h6.634v21.364zM3.842 7.721c-2.121 0-3.842-1.757-3.842-3.879 0-1.019 0.405-1.996 1.125-2.717s1.698-1.125 2.717-1.125c1.019 0 1.996 0.405 2.717 1.125s1.125 1.698 1.125 2.717c0 2.121-1.721 3.879-3.842 3.879zM31.993 32h-6.62v-10.4c0-2.479-0.050-5.657-3.449-5.657-3.449 0-3.978 2.693-3.978 5.478v10.579h-6.627v-21.364h6.363v2.914h0.093c0.886-1.679 3.049-3.45 6.277-3.45 6.714 0 7.949 4.421 7.949 10.164v11.736h-0.007z"
+          ></path>
+        </symbol>
+        <symbol id="icon-instagram" viewbox="0 0 32 32">
+          <path
+            d="M16.003 24.203c-4.54 0-8.202-3.662-8.202-8.203s3.662-8.203 8.202-8.203c4.54 0 8.203 3.662 8.203 8.203s-3.662 8.203-8.203 8.203zM16.003 10.667c-2.934 0-5.333 2.392-5.333 5.333s2.392 5.333 5.333 5.333c2.941 0 5.333-2.391 5.333-5.333s-2.399-5.333-5.333-5.333zM26.455 24.538c0-1.064-0.857-1.913-1.913-1.913-1.064 0-1.913 0.857-1.913 1.913s0.857 1.913 1.913 1.913c1.057 0 1.913-0.857 1.913-1.913zM31.888 22.596c-0.121 2.563-0.707 4.833-2.584 6.703-1.87 1.87-4.14 2.456-6.703 2.584-2.642 0.15-10.558 0.15-13.2 0-2.556-0.121-4.826-0.707-6.703-2.577s-2.456-4.14-2.584-6.703c-0.15-2.642-0.15-10.558 0-13.2 0.121-2.563 0.707-4.833 2.584-6.703s4.141-2.456 6.703-2.584c2.641-0.15 10.558-0.15 13.2 0 2.563 0.121 4.833 0.707 6.703 2.584 1.87 1.87 2.456 4.141 2.584 6.703 0.15 2.641 0.15 10.551 0 13.193zM28.475 6.57c-0.557-1.399-1.635-2.477-3.041-3.041-2.106-0.835-7.103-0.642-9.43-0.642s-7.332-0.186-9.43 0.642c-1.399 0.557-2.477 1.635-3.041 3.041-0.835 2.106-0.642 7.103-0.642 9.43s-0.186 7.332 0.642 9.43c0.557 1.399 1.635 2.477 3.041 3.041 2.106 0.835 7.103 0.642 9.43 0.642s7.332 0.186 9.431-0.642c1.399-0.557 2.477-1.635 3.041-3.041 0.835-2.106 0.643-7.103 0.643-9.43s0.193-7.332-0.643-9.43z"
+          ></path>
+        </symbol>
+        <symbol id="icon-facebook" viewbox="0 0 32 32">
+          <path
+            d="M23.647 18l0.913-5.791h-5.706v-3.758c0-1.584 0.797-3.129 3.353-3.129h2.594v-4.931c0 0-2.354-0.391-4.605-0.391-4.699 0-7.771 2.774-7.771 7.795v4.414h-5.224v5.791h5.224v14h6.429v-14h4.794z"
+          ></path>
+        </symbol>
+        <symbol id="icon-twitter" viewbox="0 0 32 32">
+          <path
+            d="M28.711 9.482c0.020 0.284 0.020 0.569 0.020 0.853 0 8.67-6.599 18.66-18.66 18.66-3.716 0-7.168-1.076-10.071-2.944 0.528 0.061 1.036 0.081 1.584 0.081 3.066 0 5.888-1.035 8.142-2.802-2.883-0.061-5.3-1.949-6.132-4.548 0.406 0.061 0.812 0.101 1.239 0.101 0.589 0 1.178-0.081 1.726-0.223-3.005-0.609-5.259-3.249-5.259-6.437v-0.081c0.873 0.487 1.888 0.792 2.964 0.832-1.766-1.178-2.924-3.188-2.924-5.462 0-1.218 0.325-2.335 0.893-3.31 3.228 3.98 8.081 6.579 13.523 6.863-0.101-0.487-0.162-0.995-0.162-1.503 0-3.614 2.924-6.558 6.558-6.558 1.888 0 3.594 0.792 4.792 2.071 1.482-0.284 2.904-0.832 4.162-1.584-0.487 1.523-1.523 2.802-2.883 3.614 1.32-0.142 2.599-0.508 3.777-1.015-0.893 1.299-2.010 2.457-3.289 3.391z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <!-- * APP -->
+    <div class="app">
+      <!-- * Header -->
+      <header class="header">
+        <div class="wrapper header__wrapper">
+          <!-- Logo -->
+          <div class="header__logo rotate-logo">
+            <div class="logo">
+              <a href="" class="logo__link">
+                <div class="logo__svg">
+                  <svg class="icon icon-logo">
+                    <use xlink:href="#icon-logo"></use>
+                  </svg>
+                </div>
+                <div class="logo__text">ITLIFE</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="header__navigation">
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Home">HOME</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Services"
+                    >SERVICES</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="About">ABOUT</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Contacts"
+                    >CONTSCTS</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Button -->
+          <div class="header__button">
+            <button class="button" type="button">
+              <span class="button__text">CALLBACK</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- * Info block -->
+      <div class="info-block">
+        <div class="wrapper info-block__wrapper">
+          <!-- Title -->
+          <div class="info-block__title">
+            <div class="titles">
+              <div class="titles__text titles--bold">WHO WE ARE</div>
+              <div class="titles__divider"></div>
+              <div class="titles__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+          <!-- Team block -->
+          <div class="team-block">
+            <div class="team-block__cards">
+              <!-- Card 1 -->
+              <div class="cards__item">
+                <div class="cards__flip-photo">
+                  <!-- Flip card -->
+                  <div class="cards__photo-rotate">
+                    <img
+                      alt="John Handson"
+                      class="cards__img"
+                      src="./assets/photos/alex.png"
+                    />
+                  </div>
+                  <!-- Back side -->
+                  <div class="cards__back-side">
+                    <!-- Twitter -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-twitter">
+                            <use xlink:href="#icon-twitter"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Instagramm -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__description">
+                  <div class="cards__title titles--bold">John Handson</div>
+                  <div class="cards__subtitle">Lead designer</div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="cards__item">
+                <div class="cards__flip-photo">
+                  <!-- Flip card -->
+                  <div class="cards__photo-rotate">
+                    <img
+                      alt="Alex Cutter"
+                      class="cards__img"
+                      src="./assets/photos/alex.png"
+                    />
+                  </div>
+                  <!-- Back side -->
+                  <div class="cards__back-side">
+                    <!-- Twitter -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-twitter">
+                            <use xlink:href="#icon-twitter"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Instagramm -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__description">
+                  <div class="cards__title titles--bold">Alex Cutter</div>
+                  <div class="cards__subtitle">Developer</div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="cards__item">
+                <div class="cards__flip-photo">
+                  <!-- Flip card -->
+                  <div class="cards__photo-rotate">
+                    <img
+                      alt="Elena Simpson"
+                      class="cards__img"
+                      src="./assets/photos/elena.png"
+                    />
+                  </div>
+                  <!-- Back side -->
+                  <div class="cards__back-side">
+                    <!-- Twitter -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-twitter">
+                            <use xlink:href="#icon-twitter"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Instagramm -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__description">
+                  <div class="cards__title titles--bold">Elena Simpson</div>
+                  <div class="cards__subtitle">Artist</div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="cards__item">
+                <div class="cards__flip-photo">
+                  <!-- Flip card -->
+                  <div class="cards__photo-rotate">
+                    <img
+                      alt="Alex Cutter"
+                      class="cards__img"
+                      src="./assets/photos/lilly.png"
+                    />
+                  </div>
+                  <!-- Back side -->
+                  <div class="cards__back-side">
+                    <!-- Twitter -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-twitter">
+                            <use xlink:href="#icon-twitter"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Instagramm -->
+                    <div class="social h-margin-4">
+                      <a href="#" class="social__link">
+                        <div class="social__item">
+                          <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__description">
+                  <div class="cards__title titles--bold">Lily Allen</div>
+                  <div class="cards__subtitle">Graphic Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="wrapper footer__wrapper">
+          <div class="footer__logo rotate-logo">
+            <div class="logo">
+              <a href="" class="logo__link">
+                <div class="logo__svg">
+                  <svg class="icon icon-logo">
+                    <use xlink:href="#icon-logo"></use>
+                  </svg>
+                </div>
+                <div class="logo__text">ITLIFE</div>
+              </a>
+            </div>
+          </div>
+          <!-- Footer navigation -->
+          <div class="footer__navigation">
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Home">HOME</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Services"
+                    >SERVICES</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="About">ABOUT</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" title="Contacts"
+                    >CONTSCTS</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Footer social -->
+          <div class="footer__social-block">
+            <!-- * Social network icon -->
+            <!-- Twitter -->
+            <div class="social h-margin-10">
+              <a href="#" class="social__link">
+                <div class="social__item">
+                  <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- Facebook -->
+            <div class="social h-margin-10">
+              <a href="#" class="social__link">
+                <div class="social__item">
+                  <svg class="icon icon-facebook">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- Instagramm -->
+            <div class="social h-margin-10">
+              <a href="#" class="social__link">
+                <div class="social__item">
+                  <svg class="icon icon-instagram">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="social h-margin-10">
+              <a href="#" class="social__link">
+                <div class="social__item">
+                  <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <!-- Telegram -->
+            <div class="social h-margin-10">
+              <a href="#" class="social__link">
+                <div class="social__item">
+                  <svg class="icon icon-telegram">
+                    <use xlink:href="#icon-telegram"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

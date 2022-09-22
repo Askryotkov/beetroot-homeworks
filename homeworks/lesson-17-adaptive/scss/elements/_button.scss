@@ -1,0 +1,14 @@
+.e-button{
+  background-color:$c-grey-700 ;
+  color: $c-white;
+  width: 180px;
+  height: 48px;
+  cursor: pointer;
+  transition: $t-normal;
+  border: none;
+}
+
+.e-button:hover{
+background-color: $c-grey-500;
+color: $c-orange;
+}

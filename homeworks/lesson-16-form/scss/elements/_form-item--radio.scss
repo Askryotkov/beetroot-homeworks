@@ -1,0 +1,20 @@
+.form {
+  &__gender {
+    padding-top: 10px;
+    display: flex;
+  }
+  
+  &__item--radio {
+    margin-left: 12px;
+    appearance: none;
+  }
+
+
+  &__item--radio:first-child {
+    margin-left: 0;
+  }
+
+  &__text {
+    margin-left: 8px;
+  }
+}

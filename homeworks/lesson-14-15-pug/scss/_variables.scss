@@ -1,0 +1,23 @@
+// * Colors
+$c-dirty-grey: #666666;
+$c-light-grey: #cccccc;
+$c-dark-grey: #333333;
+$c-yellow: #ffcc00;
+$c-grey: #898f8f;
+$c-white: white;
+
+// * Border size and solid
+$bsz-bs: 1px solid $c-yellow;
+
+// * Font family
+$ff-raleway: "raleway", sans-serif;
+$ff-roboto: "Roboto", sans-serif;
+
+// * Font sizes
+$fs-base: 14;
+
+// * Transition
+// Bezier
+$b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+// Transition
+$t-normal: 0.35s $b-normal;

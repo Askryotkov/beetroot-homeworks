@@ -1,0 +1,11 @@
+//- ! mode: 'tl' || 'tr' || 'br' || 'bl'
+mixin square(mode='tl')
+  - let classes = ''
+  - mode === 'tl' ? classes = 'square--top-left' : ''
+  - mode === 'tr' ? classes = 'square--top-right' : ''
+  - mode === 'br' ? classes = 'square--bottom-right' : ''
+  - mode === 'bl' ? classes = 'square--bottom-left' : ''
+
+  .square(class=classes)
+
+    

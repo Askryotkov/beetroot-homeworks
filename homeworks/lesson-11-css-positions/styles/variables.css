@@ -3,6 +3,8 @@
   --c-black: #000000;
   --c-white: #ffffff;
   --c-grey: #dadada;
+  --c-light-grey:#E6E6E6;
+  --c-dark-grey: #949494;
 
   /* * Font sizes */
   --fs-small: 22px;
@@ -16,8 +18,9 @@
   --ff-francois-one: "Francois One";
   --ff-farro: "Farro";
   --ff-pt-sans: "PT Sans";
+  --ff-roboto: 'Roboto';
 
   /* *Transition */
   --b-normal: cubic-bezier(0.4, 0, 0.2, 1);
-  --t-normal: 0.35s var(--b-normal);
+  --t-normal: 1s var(--b-normal);
 }

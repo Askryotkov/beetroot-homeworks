@@ -1,0 +1,41 @@
+mixin registration()
+  form(method='get').forms
+    .forms__wrapper 
+      //- Form head
+      .forms__head
+        h1.form__title Create an Account
+      //- * Content
+      .forms__union 
+        //- User name
+        +formItem('First Name', 'user-name', 'Please, write your name')
+        //- Last name
+        +formItem('Last Name', 'last-name', 'Please, write your surname')
+      //- E-mail
+      +formItem('E-mail', 'e-mail', 'Please, write your e-mail')
+      //- Gender
+      .forms__gender 
+        +formItem--radio('Male', 'gender', 'radio', ' form__input--radio', 'male')
+        +formItem--radio('Female', 'gender', 'radio', ' form__input--radio', 'female')
+      //- Region
+      .forms__union 
+        +formItem--country
+        +formItem('City', 'cities', 'Please, write your city')
+      //- Button
+      .forms__button 
+        +button('Sing Up', 'submit')
+      //- Description
+      .forms__description
+        .forms__description__wrapper
+          | By clicking the Sign Up button, you confirm that you accept our
+          |
+          a(href="#").forms__link Therms of Use
+          |
+          | and 
+          |
+          a(href='#').forms__link Privacy Policy 
+      //- Footer
+      +footer
+
+
+
+

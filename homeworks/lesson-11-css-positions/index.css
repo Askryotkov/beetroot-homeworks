@@ -1,12 +1,21 @@
 /* * Header */
 .header {
-  display: flex;
+  background-color: var(--c-white);
   justify-content: center;
-  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 70px;
+  z-index: 50;
+  right: 0;
+  left: 0;
+  top: 0;
 }
 .header-wrapper {
-  width: 100%;
   justify-content: space-between;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: flex;
+  width: 100%;
 }
 
 /* * ENG + Navigation */
@@ -38,8 +47,8 @@
   display: flex;
 }
 .navigation-item {
-  display: flex;
   margin-right: 10px;
+  display: flex;
 }
 .navigation-item:last-child {
   margin-right: 0;
@@ -48,49 +57,90 @@
   cursor: default;
 }
 .navigation-link {
-  transition: color 0.35s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   box-shadow: inset 0 0 0 0 var(--c-black);
   color: var(--c-black);
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
 }
 .navigation-link:hover {
-  box-shadow: inset 130px 0 0 0 var(--c-black);
+  box-shadow: inset 120px 0 0 0 var(--c-black);
   color: var(--c-white);
 }
 
 /* *Main page */
-.main-page {
+.full-page {
   justify-content: center;
+  margin-top: 60px;
   display: flex;
   width: 100%;
-  position: relative;
 }
-.main-page-wrapper{
+.full-page-wrapper {
+  position: relative;
   padding-top: 85px;
 }
 /* Background */
-.background-test{
-  position: absolute;
-  right: 0;
+.background-img {
+  position: fixed;
   z-index: -1;
-
+  right: 0;
 }
 
+/* Side bar */
+.side-bar-navigation-blok {
+  padding-right: 30px;
+  padding-top: 80px;
+}
+.side-bar-navigation {
+  position: sticky;
+  width: 385px;
+  top: 80px;
+}
 
+.side-bar-navigation-item {
+  margin-top: 80px;
+  border-bottom: 2px solid var(--c-grey);
+}
+.side-bar-navigation-item:first-child {
+  margin-top: 0;
+}
+.navigation-link-side-bar {
+  color: var(--c-black);
+  cursor: default;
+}
+/* .navigation-link-side-bar:hover {
+} */
+.big--title-side-bar {
+  transition: var(--t-normal);
+}
+.big--title-side-bar:hover {
+  cursor: pointer;
+  color: var(--c-dark-grey);
+}
 
 /* Chapter 1 */
-.chapters{
+.chapters {
   padding-top: 70px;
 }
-.chapters:first-child{
+.chapters:first-child {
   padding-top: 0;
 }
-.chapters:last-child{
+.chapters:last-child {
   padding-bottom: 90px;
+}
+.chapters-relative {
+  position: relative;
 }
 .titles {
   display: flex;
+}
+.separator-wrapper {
+  padding-bottom: 20px;
+}
+.separator {
+  width: 100px;
+  height: 8px;
+  background-color: var(--c-black);
 }
 .big-title {
   font-family: var(--ff-francois-one);
@@ -108,23 +158,98 @@
   font-size: var(--fs-medium);
   padding-top: 40px;
 }
-.bottom-line{
+.bottom-line {
   text-decoration-thickness: 1px;
   text-decoration: underline;
 }
-.simple--text-italic{
+.simple--text-italic {
   font-style: italic;
 }
-.simple--text-bold{
+.simple--text-bold {
   font-weight: 700;
 }
-.simple--text-background{
+.simple--text-background {
   background-color: var(--c-grey);
 }
-.highlight::before{
+.highlight::before {
   content: "<";
-
 }
-.highlight::after{
+.highlight::after {
   content: ">";
+}
+
+/* * Who's using */
+.full--page-wrapper {
+  width: 100%;
+}
+
+/* Denotation */
+.denotation {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+.denotation-wrapper {
+  align-items: center;
+  flex-direction: row;
+  padding-top: 70px;
+  display: flex;
+}
+.separator--wrapper-denotation{
+  padding-right: 20px;
+}
+.denotation-title {
+  font-family: var(--ff-roboto);
+  font-size: var(--fs-big);
+}
+
+/* * Logos blok */
+.logos-box{
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.logos-box-wrapper{
+  border-bottom: 2px solid var(--c-light-grey);
+  border-top: 2px solid var(--c-light-grey);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.logo-items-row {
+  justify-content: space-between;
+  padding-top: 30px;
+  display: flex;
+}
+.logo-items-row:first-child{
+  padding-top: 0;
+}
+
+.logo-item {
+  background-color: var(--c-light-grey);
+  transition: var(--t-normal);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 180px;
+  display: flex;
+  width: 270px;
+  position: relative;
+}
+.logo-item:hover{
+transform: rotateX(360deg);
+background-color: var(--c-black);
+color: var(--c-white);
+}
+
+
+.item-svg {
+  width: 200px;
+  position: absolute;
+  transition: var(--t-normal);
+}
+.item--svg-back-side{
+opacity: 0;
+}
+.logo-item:hover .item--svg-back-side{
+  opacity: 1;
 }

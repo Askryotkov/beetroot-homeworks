@@ -1,0 +1,22 @@
+.simple-button{
+  background-color: transparent;
+  transition: $t-normal;
+  padding: 5px 10px;
+  border: $bsz-bs;
+  cursor: pointer;
+  
+  &__text{
+    text-transform: uppercase;
+    transition: $t-normal;
+    color: $c-dirty-grey;
+  }
+}
+.simple-button:hover{
+  border: 1px solid $c-dirty-grey;
+}
+.simple-button:hover .simple-button__text{
+  border-color: $c-yellow;
+  color: $c-yellow;
+
+  
+}

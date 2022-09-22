@@ -1,0 +1,41 @@
+.e-burger {
+  background-color: transparent;
+  transition: $t-normal;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  z-index: 801;
+
+  // &:hover {
+  //   // background-color: rgba($c-black, 0.1);
+  // }
+
+  &--open{
+    & > .e-burger__line{
+      transform: rotate(45deg);
+      
+      &:nth-child(2){
+        transform: rotate(-45deg);
+      }
+
+      &:last-child{
+        opacity: 0;
+      }
+    }
+  }
+
+  &__line {
+    background-color: $c-black;
+    transition: $t-normal;
+    margin-top: 8px;
+    display: block;
+    width: 35px;
+    height: 2px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

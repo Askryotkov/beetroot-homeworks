@@ -1,0 +1,26 @@
+* {
+  //  TODO Remove before load to git
+  // border: 1px solid orange;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: $c-white;
+  padding: 30px;
+  font-size: 100px;
+}
+
+ul{
+  list-style-type: none;
+}

@@ -1,0 +1,163 @@
+.c-content-item {
+  &__wrapper {
+    padding-top: 50px;
+    display: flex;
+
+    @include media("<=tablet") {
+      justify-content: space-between;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--column-small {
+      flex-direction: column;
+      max-width: 370px;
+
+      @include media("<=tablet") {
+        flex-direction: row;
+        max-width: 700px;
+        width: 100%;
+      }
+    }
+
+    &--column-medium {
+      max-width: 570px;
+
+      @include media("<=tablet") {
+        flex-direction: column;
+        max-width: 700px;
+      }
+    }
+  }
+
+  &__image-block {
+    max-height: 470px;
+    max-width: 570px;
+    display: flex;
+    width: 100%;
+
+    @include media("<=tablet") {
+      max-height: 280px;
+      max-width: 340px;
+    }
+  }
+  &--modified {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @include media("<=tablet") {
+      padding-left: 0;
+      padding-right: 0;
+
+      .c-content-item__wrapper--column-small {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.c-review {
+  padding-right: 120px;
+  padding-bottom: 95px;
+  padding-left: 30px;
+  padding-top: 85px;
+  max-width: 600px;
+  width: 100%;
+
+  @include media("<=tablet") {
+    padding-left: 20px;
+    padding-bottom: 0;
+    max-width: 340px;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  &__wrapper {
+    max-width: 570px;
+
+    @include media("<=tablet") {
+      max-width: 340px;
+    }
+  }
+
+  &__head {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &__subtitle {
+    letter-spacing: 0.1em;
+    color: $c-grey-500;
+  }
+
+  &__title {
+    font-family: $ff-red-hat-display;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    font-size: em(24);
+    padding-top: 30px;
+    font-weight: 500;
+    max-width: 340px;
+    color: $c-black;
+  }
+
+  &__date {
+    letter-spacing: 0.1em;
+    color: $c-grey-500;
+    padding-top: 15px;
+    display: block;
+  }
+
+  &__description {
+    letter-spacing: 0.05em;
+    line-height: em(24);
+    padding-top: 50px;
+
+    @include media("<=tablet") {
+      padding-top: 40px;
+      max-width: 340px;
+    }
+  }
+
+  &--reverse {
+    padding-left: 120px;
+    padding-right: 20px;
+
+    @include media("<=tablet") {
+      padding-left: 20px;
+      padding-bottom: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+  }
+
+  &--small {
+    padding-top: 25px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.c-review--small {
+  .c-review__head {
+    font-size: em(12);
+  }
+
+  .c-review__date {
+    padding-top: 0;
+  }
+
+  .c-review__description {
+    padding-top: 20px;
+  }
+}
+
+.c-review--medium {
+  .c-review__title {
+    max-width: 570px;
+    width: 100%;
+  }
+}

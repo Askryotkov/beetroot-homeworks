@@ -1,0 +1,22 @@
+.footer{
+  border-top: 1px solid $c-almost-white;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+
+  &__wrapper{
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    display: flex;
+    width: 100%;
+
+  }
+
+  &__text{
+    padding-right: 20px;
+  }
+  &__link{
+    font-weight: 500;
+  }
+}

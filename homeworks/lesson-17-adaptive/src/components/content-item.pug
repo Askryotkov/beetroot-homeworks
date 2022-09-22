@@ -1,0 +1,29 @@
+mixin content-item(args={})
+  - let styles = ''
+  - let classes = ''
+  - let classes2 = ''
+  - args.width ? styles += `max-width:${args.width}px` : null
+  - args.reverseMode ? classes += ' c-content-item__wrapper--reverse' : null
+  - args.reverseMode ? classes2 += ' c-review--reverse' : null
+  - args.modifier ? classes += ' c-content-item__wrapper--column-small' : null
+  - args.modifier ? classes2 += ' c-review--small' : null
+  - args.modifierMedium ? classes += ' c-content-item__wrapper--column-medium' : null
+  - args.modifierMedium ? classes2 += ' c-review--medium' : null
+
+
+  .c-content-item(class=args.class)
+    .c-content-item__wrapper(class=classes)
+      .c-content-item__image-block(style=styles)
+        img.c-content-item__image(src=args.img, alt=args.alt)
+      .c-review(class=classes2)
+        .c-review__wrapper
+          .c-review__head
+            span.c-review__subtitle=args.subtitle 
+            if args.modifier
+              span.c-review__date=args.date 
+          .c-review__title(class=classes5)=args.title
+          if !args.modifier 
+            span.c-review__date=args.date
+          .c-review__description=args.description
+          if !args.modifier
+            +sliding-link

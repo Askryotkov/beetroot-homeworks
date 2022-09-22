@@ -1,0 +1,12 @@
+mixin review(args={})
+  -let classes = ""
+  - args.reverseMode ? classes += 'c-review--reverse' : null
+
+  .c-review(class=classes)
+    .c-review__wrapper
+      .c-review__subtitle=args.subtitle 
+      .c-review__title=args.title
+      .c-review__date=args.date 
+      .c-review__description=args.description
+        
+        

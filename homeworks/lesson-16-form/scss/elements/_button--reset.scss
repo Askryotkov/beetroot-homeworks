@@ -1,0 +1,24 @@
+.button-reset{
+  padding-top: 10px;
+  padding-left: 10px;
+  position: relative;
+  
+  
+  &__wrapper{
+    border: 1px solid $c-light-grey;
+    background-color: $c-white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    height: 30px;
+    width: 30px;
+  }
+  
+  &__icon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+
+  }
+}

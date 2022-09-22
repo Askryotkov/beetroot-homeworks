@@ -30,7 +30,8 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1240px;
-  display: flex;
+  /*  */
+  /* display: flex; */
 }
 
 /* *Links */
@@ -45,5 +46,8 @@ ul {
 }
 /* *Images */
 img {
+  display: flex;
+}
+svg{
   display: flex;
 }

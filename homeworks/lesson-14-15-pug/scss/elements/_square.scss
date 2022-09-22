@@ -1,0 +1,30 @@
+.square{
+  @include size(100);
+  position: absolute;
+
+}
+
+.square--top-left{
+  border-left: $bsz-bs; 
+  border-top: $bsz-bs;
+  left: 0;
+  top: 0;
+}
+.square--top-right{
+  border-right: $bsz-bs;
+  border-top: $bsz-bs;
+  right: 0;
+  top: 0;
+}
+.square--bottom-right{
+  border-bottom: $bsz-bs;
+  border-right: $bsz-bs;
+  bottom: 0;
+  right: 0;
+}
+.square--bottom-left{
+  border-bottom: $bsz-bs;
+  border-left: $bsz-bs;
+  bottom: 0;
+  left: 0;
+}

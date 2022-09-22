@@ -1,0 +1,36 @@
+.file{
+  max-width: 145px;
+  width: 100%;
+
+
+
+  &__upload-photo{
+    border: 1px solid $c-light-grey;
+    justify-content: end;
+    align-items: center;
+    border-radius: 6px;
+    position: relative;
+    padding-right: 9px;
+    margin-top: 10px;
+    display: flex;
+    height: 30px;
+  }
+
+  &__input{
+    display: none;
+  }
+
+  &__icon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+  }
+
+  &__text{
+    font-size: em(13);
+    color: $c-grey;
+    padding-top: 10px;
+    display: block;
+  }
+}

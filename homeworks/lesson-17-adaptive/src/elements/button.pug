@@ -1,0 +1,9 @@
+mixin button(args={})
+  - const type = args.type || 'button'
+
+
+  button.e-button(type=type)
+    if args.text
+      span.e-button__text=args.text
+    else 
+      span(style='color:red') Default text

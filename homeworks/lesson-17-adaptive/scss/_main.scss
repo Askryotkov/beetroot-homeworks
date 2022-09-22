@@ -1,0 +1,96 @@
+* {
+  //  TODO Remove before load to git
+  // border: 1px solid orange;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+// * Heading
+h1 {
+  font-family: $ff-red-hat-display;
+  line-height: em(24);
+  font-size: em(48);
+  font-weight: 400;
+  color: $c-black;
+
+  @include media("<=tablet"){
+    font-size: em(36);
+  }
+}
+
+h2 {
+  font-family: $ff-red-hat-display;
+  line-height: em(24);
+  font-size: em(48);
+  font-weight: 400;
+  color: $c-black;
+}
+
+h3 {
+  // font-family: "Red Hat Display";
+  // font-style: normal;
+  font-weight: 500;
+  font-size: em(28);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: $c-black;
+}
+
+h4 {
+  font-family: $ff-red-hat-display;
+  letter-spacing: 0.1em;
+  line-height: em(28);
+  font-size: em(24);
+  font-weight: 300;
+  color: $c-black;
+}
+
+body {
+  background-color: $c-white;
+  font-family: $ff-lato;
+  font-size: $fs-base;
+  color: $c-grey-700;
+}
+
+.wrapper {
+  padding-right: 35px;
+  padding-left: 35px;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+picture{
+  display: flex;
+  width: 100%;
+}
+
+path {
+  transition: $t-normal;
+}
+
+.h-fd-column{
+  flex-direction: column;
+}
