@@ -68,10 +68,25 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   width: 100%;
+
+  @include media("<=small"){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+// * Icons
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 ul {

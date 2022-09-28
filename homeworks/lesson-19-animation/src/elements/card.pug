@@ -1,0 +1,21 @@
+mixin card(args={})
+  .flip-card 
+    //- .flip-card__title=args.title
+    .flip-card__wrapper(class=args.classes)
+      .flip-card__front
+        img(src=args.src, alt=args.alt).flip-card__image
+      .flip-card__back(class=args.classes2)
+        if !args.src2
+          .flip-card__top 
+            span.flip-card__card-seniority=args.seniority
+            .flip-card__suit 
+              svg.icon(class=args.suit)
+                use(xlink:href=args.id)
+          .flip-card__middle
+            svg.icon(class=args.suit)
+              use(xlink:href=args.id)    
+          .flip-card__bottom 
+            span.flip-card__card-seniority=args.seniority
+            .flip-card__suit 
+              svg.icon(class=args.suit)
+                use(xlink:href=args.id)

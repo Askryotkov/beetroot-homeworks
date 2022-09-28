@@ -1,0 +1,316 @@
+include ./src/elements/index
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='icon' type='image/x-icon' href='./favicon.ico')
+    //- * Styles
+    link(rel="stylesheet" href="index.css")
+    title Animation
+  body 
+    //- * Icons
+    include ./assets/icons/symbol-defs.svg
+
+    .app   
+      .packman
+      //- * Hearts
+      .wrapper.card-box
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'A',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'K',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'Q',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'J',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-endless-stop',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '10',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '9',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '8',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '7',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '6',
+          suit: ' icon-heart',
+          id: '#icon-heart',
+          classes2: 'h-color-red'
+        })
+      //-  * Diamonds
+      .wrapper.card-box
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'A',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'K',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'Q',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'J',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-endless-stop',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '10',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '9',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '8',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '7',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '6',
+          suit: ' icon-diamond',
+          id: '#icon-diamond',
+          classes2: 'h-color-red'
+        })
+      //- * Clubs
+      .wrapper.card-box
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'A',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'K',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'Q',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'J',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          classes: 'h-endless-stop',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '10',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '9',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '8',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '7',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '6',
+          suit: ' icon-club',
+          id: '#icon-club',
+        })
+      //- * Spides
+      .wrapper.card-box
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'A',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'K',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'Q',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: 'J',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          classes: 'h-endless-stop',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '10',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          classes: 'h-endless-x',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '9',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '8',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '7',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })
+        +card({
+          classes: 'h-xyz',
+          src: './assets/images/backside.jpg',
+          alt: 'Backside',
+          seniority: '6',
+          suit: ' icon-spade',
+          id: '#icon-spade',
+        })

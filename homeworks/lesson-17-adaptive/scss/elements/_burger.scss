@@ -13,15 +13,18 @@
   // }
 
   &--open{
+    transform: rotate(310deg);
+
     & > .e-burger__line{
-      transform: rotate(45deg);
+      transform: rotate(-30deg) translateX(-3px);
       
       &:nth-child(2){
-        transform: rotate(-45deg);
+        transform: rotate(0);
       }
-
+      
       &:last-child{
-        opacity: 0;
+        // opacity: 0;
+        transform: rotate(30deg) translate(-3px);
       }
     }
   }

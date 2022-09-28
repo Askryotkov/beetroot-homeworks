@@ -378,9 +378,24 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+@media (max-width: 320px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 a {
   text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 ul {
@@ -475,9 +490,24 @@ path {
   .c-content-item__wrapper {
     justify-content: space-between;
   }
+  .c-content-item__wrapper__wrapper:nth-child(2) {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .c-content-item__wrapper {
+    flex-direction: column-reverse;
+    padding-top: 30px;
+  }
 }
 .c-content-item__wrapper--reverse {
   flex-direction: row-reverse;
+}
+@media (max-width: 320px) {
+  .c-content-item__wrapper--reverse {
+    flex-direction: column-reverse;
+  }
 }
 .c-content-item__wrapper--column-small {
   flex-direction: column;
@@ -490,17 +520,29 @@ path {
     width: 100%;
   }
 }
+@media (max-width: 320px) {
+  .c-content-item__wrapper--column-small {
+    flex-direction: column;
+  }
+}
 .c-content-item__wrapper--column-medium {
+  margin-right: 10px;
   max-width: 570px;
 }
 @media (max-width: 768px) {
   .c-content-item__wrapper--column-medium {
     flex-direction: column;
+    padding-left: 10px;
     max-width: 700px;
   }
 }
+@media (max-width: 320px) {
+  .c-content-item__wrapper--column-medium {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
 .c-content-item__image-block {
-  max-height: 470px;
   max-width: 570px;
   display: flex;
   width: 100%;
@@ -509,6 +551,11 @@ path {
   .c-content-item__image-block {
     max-height: 280px;
     max-width: 340px;
+  }
+}
+@media (max-width: 320px) {
+  .c-content-item__image-block {
+    margin-top: 35px;
   }
 }
 .c-content-item--modified {
@@ -523,6 +570,11 @@ path {
   .c-content-item--modified .c-content-item__wrapper--column-small {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  .c-content-item--modified .c-content-item__wrapper--column-small {
+    flex-direction: column;
   }
 }
 
@@ -543,12 +595,17 @@ path {
     padding-top: 0;
   }
 }
+@media (max-width: 320px) {
+  .c-review {
+    padding-left: 0;
+  }
+}
 .c-review__wrapper {
   max-width: 570px;
 }
 @media (max-width: 768px) {
   .c-review__wrapper {
-    max-width: 340px;
+    max-width: 360px;
   }
 }
 .c-review__head {
@@ -603,6 +660,11 @@ path {
   padding-right: 0;
   padding-left: 0;
 }
+@media (max-width: 768px) {
+  .c-review--small {
+    margin-left: 10px;
+  }
+}
 
 .c-review--small .c-review__head {
   font-size: 0.75em;
@@ -623,10 +685,20 @@ path {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 320px) {
+  .heading {
+    display: block;
+  }
+}
 .heading__link {
   color: #7B7B7B;
   letter-spacing: 0.1em;
   transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 320px) {
+  .heading__link {
+    margin-top: 10px;
+  }
 }
 .heading__link:hover {
   color: #000;
@@ -650,16 +722,37 @@ path {
   background-color: #F4F4F4;
   justify-content: center;
   align-items: center;
-  position: relative;
   color: #000;
   height: 300px;
-  display: flex;
   margin-top: 90px;
+  display: flex;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 420px;
+  }
+}
+@media (max-width: 320px) {
+  .footer {
+    height: 450px;
+  }
 }
 .footer__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .footer__wrapper {
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+  }
 }
 .footer__title {
   font-family: "Red Hat Display", sans-serif;
@@ -670,13 +763,24 @@ path {
 .footer__contacts {
   padding-top: 15px;
 }
+@media (max-width: 768px) {
+  .footer__contacts {
+    padding-top: 20px;
+  }
+}
 .footer__contacts:first-child {
   padding-top: 30px;
 }
 .footer__social {
   display: flex;
 }
-.footer__icon {
+@media (max-width: 768px) {
+  .footer__social {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.footer__link {
   width: 50px;
   height: 50px;
   border: 1px solid #565656;
@@ -684,24 +788,30 @@ path {
   transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   margin-right: 25px;
+  color: #565656;
+  font-size: 24px;
   display: flex;
 }
-.footer__icon:last-child {
+.footer__link:last-child {
   margin-right: 0;
 }
-.footer__icon:hover {
-  cursor: pointer;
+.footer__link:hover {
   background-color: #565656;
 }
-.footer__icon:hover path {
-  fill: #fff;
-}
-.footer__link {
-  display: flex;
+.footer__link:hover .icon {
+  color: #fff;
 }
 .footer__info {
   bottom: 30px;
+  margin: 0 auto;
+  text-align: center;
   position: absolute;
+  left: 40%;
+}
+@media (max-width: 768px) {
+  .footer__info {
+    position: static;
+  }
 }
 
 .c-navigation {
@@ -778,14 +888,17 @@ path {
   padding: 5px;
   z-index: 801;
 }
+.e-burger--open {
+  transform: rotate(310deg);
+}
 .e-burger--open > .e-burger__line {
-  transform: rotate(45deg);
+  transform: rotate(-30deg) translateX(-3px);
 }
 .e-burger--open > .e-burger__line:nth-child(2) {
-  transform: rotate(-45deg);
+  transform: rotate(0);
 }
 .e-burger--open > .e-burger__line:last-child {
-  opacity: 0;
+  transform: rotate(30deg) translate(-3px);
 }
 .e-burger__line {
   background-color: #000;
@@ -870,9 +983,20 @@ path {
     max-width: 500px;
   }
 }
+@media (max-width: 320px) {
+  .banner__title {
+    left: 10px;
+    top: 70px;
+  }
+}
 
 .content {
   padding-top: 90px;
+}
+@media (max-width: 320px) {
+  .content__title {
+    text-align: center;
+  }
 }
 .content__block {
   justify-content: space-between;
@@ -884,6 +1008,11 @@ path {
   }
   .content__block--modified {
     flex-direction: row;
+  }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  .content__block--modified {
+    flex-direction: column;
   }
 }
 .content__button {
@@ -905,6 +1034,11 @@ path {
   .content__info-block .content__info-item:last-child {
     text-align: right;
     padding-top: 70px;
+  }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  .content__info-block .content__info-item:last-child {
+    text-align: left;
   }
 }
 .content__info-item {

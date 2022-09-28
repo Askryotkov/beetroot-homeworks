@@ -1,0 +1,19 @@
+// * Base
+@import "./scss/index";
+@import "./scss/elements/keyfarmes";
+
+.packman {
+  position: absolute;
+  @include size(10);
+  background-color: $c-orange;
+  border-radius: 4px;
+  animation: packman 40s linear infinite;
+}
+
+.card-box {
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  // border: 3px solid orange;
+}

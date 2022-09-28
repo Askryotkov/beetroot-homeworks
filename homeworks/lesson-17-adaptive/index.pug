@@ -13,6 +13,7 @@ html(lang="en")
     link(rel="stylesheet" href="index.css")
     title Adaptive 
   body 
+    include ./assets/icons/symbol-defs.svg
     .app 
       //- * Header
       +header 
@@ -20,9 +21,12 @@ html(lang="en")
       .banner 
         .banner__wrapper
           +photo({
-          width: '1440',
-          photo: './assets/images/bg-image.jpg',
-          atl: 'Building photo'
+            srcset: './assets/images/bg-image.jpg',
+            media: '(min-width: 769px)',
+            srcset2: './assets/images/bg-image-768.jpg',
+            media2: '(min-width: 321px)',
+            img: './assets/images/bg-image-320.jpg',
+            atl: 'Building photo'
           })
           h1.banner__title Manifest is a newborn theme. Clean, simple and fast.
       //- * Content
@@ -30,7 +34,11 @@ html(lang="en")
         .wrapper.content__wrapper
           h2.content__title Blog
           +content-item({
-            img: './assets/images/arrow.jpg',
+            srcset: './assets/images/arrow.jpg',
+            media: '(min-width: 769px)',
+            srcset2: './assets/images/arrow-340-280.jpg',
+            media2: '(min-width: 320px)',
+            img: './assets/images/arrow-300-250.jpg',
             alt: 'Arrow',
             subtitle: 'Technology, Interface Design',
             title: 'Using UX Design to Build a Sustainable Future',
@@ -52,7 +60,7 @@ html(lang="en")
           +heading({title: 'Latest Posts'})
           .content__block 
             +content-item({
-              
+
               modifier: true,
               img: './assets/images/lamp.jpg',
               alt: 'Lamp',

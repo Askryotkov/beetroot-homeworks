@@ -1,0 +1,99 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+  background-color: transparent;
+  font-family: $ff-righteous;
+  transition: 1s linear;
+  font-size: 20px;
+  height: 210px;
+  width: 150px;
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    transform-style: preserve-3d;
+    transition: 1s linear;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__front {
+    transition: $t-normal;
+    color: black;
+  }
+
+  &__image {
+    border-radius: 4px;
+    width: 150px;
+    height: 210px;
+  }
+
+  &__back {
+    background-color: $c-white;
+    transform: rotateY(180deg);
+    border: 1px solid $c-black;
+    transition: $t-normal;
+    border-radius: 4px;
+    color: $c-black;
+  }
+
+  // Back side
+  &__top {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+
+  &__middle {
+    font-size: 50px;
+    margin-top: 50%;
+  }
+
+  &__bottom {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+.flip-card:hover .flip-card__wrapper {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: $t-normal;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.h-color-red {
+  color: $c-red;
+}
+
+
+.h-endless-x {
+  animation:  6s linear 4s infinite endless-x;
+}
+
+.h-endless-stop {
+  animation:  7s linear 2s infinite endless-stop;
+
+  & .icon {
+    animation: turn 3s linear infinite;
+  }
+}
+
+.h-xyz {
+  animation:  15s linear 6s infinite x-y-rotation;
+}

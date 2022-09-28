@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(59, 173, 227, 1) 0%,
+    rgba(87, 111, 230, 1) 25%,
+    rgba(152, 68, 183, 1) 51%,
+    rgba(255, 53, 127, 1) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+}
+
+.app {
+  position: relative;
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 15px;
+  width: 100%;
+
+  &:first-child {
+    padding-top: 20px;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  transition: 3s linear;
+}
+
+img {
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  stroke: currentColor;
+  fill: currentColor;
+  stroke-width: 0;
+  height: 1em;
+  width: 1em;
+}
+

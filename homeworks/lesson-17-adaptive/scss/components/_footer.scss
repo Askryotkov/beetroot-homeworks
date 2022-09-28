@@ -2,16 +2,35 @@
   background-color: $c-grey-100;
   justify-content: center;
   align-items: center;
-  position: relative;
   color: $c-black;
   height: 300px;
-  display: flex;
   margin-top: 90px;
+  display: flex;
+  position: relative;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 420px;
+  }
+
+  @include media("<=small") {
+    height: 450px;
+  }
 
   &__wrapper {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    display: flex;
+    // display: flex;
+    height: 100%;
+
+    @include media("<=tablet") {
+      flex-direction: column;
+      justify-content: start;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -24,6 +43,10 @@
   &__contacts {
     padding-top: 15px;
 
+    @include media("<=tablet") {
+      padding-top: 20px;
+    }
+
     &:first-child {
       padding-top: 30px;
     }
@@ -31,15 +54,21 @@
 
   &__social {
     display: flex;
+    @include media("<=tablet") {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
-  &__icon {
+  &__link {
     @include size(50);
     border: 1px solid $c-grey-700;
     justify-content: center;
     transition: $t-normal;
     align-items: center;
     margin-right: 25px;
+    color: $c-grey-700;
+    font-size: 24px;
     display: flex;
 
     &:last-child {
@@ -47,21 +76,24 @@
     }
   }
 
-  &__icon:hover {
-    cursor: pointer;
+  &__link:hover {
     background-color: $c-grey-700;
   }
-
-  &__icon:hover path {
-    fill: $c-white;
-  }
-
-  &__link {
-    display: flex;
+  &__link:hover .icon {
+    color: $c-white;
   }
 
   &__info {
     bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
     position: absolute;
+    left: 40%;
+
+    @include media("<=tablet") {
+      // margin-top: 40px;
+      position: static;
+      // background-color: $c-grey-100;
+    }
   }
 }

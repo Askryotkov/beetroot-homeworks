@@ -3,7 +3,8 @@ mixin photo(args={})
   - args.width ? styles += `max-width:${args.width}px` : null
 
   .e-photo(style=styles)
-    if args.photo, args.alt
-      img.e-photo__img(src=args.photo, alt=args.alt)
-    else 
-      img.e-photo__img(src=args.photo, alt='photo')
+    picture.content-item__picture
+      source(srcset=args.srcset, media=args.media)
+      source(srcset=args.srcset2, media=args.media2)
+      img.e-photo__img(src=args.img, alt=args.alt)
+    

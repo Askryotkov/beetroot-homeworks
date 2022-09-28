@@ -1,0 +1,13 @@
+// * Colors
+$c-white: white;
+$c-orange: orange;
+$c-wild-blue: #A7B0CA;
+$c-red:#FF101F;
+$c-black:#000;
+
+// * Font family
+$ff-righteous: 'Righteous', cursive;
+
+// * Transition
+$b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+  $t-normal: 2s $b-normal;
