@@ -1,0 +1,13 @@
+mixin button(args)
+  - const type = args.type || 'button'
+
+  button.button(type=args.type)
+    if args.like
+      a(href="#").button__link 
+        svg.icon.icon-like
+          use(xlink:href='#icon-like')
+    if args.download 
+      a(href="#").button__link 
+        svg.icon.icon-download
+          use(xlink:href='#icon-download')
+

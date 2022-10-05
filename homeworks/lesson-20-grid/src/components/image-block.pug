@@ -1,0 +1,13 @@
+mixin imageBlock(args)
+  .image-block(class=args.class)
+    img(src=args.src, alt=args.alt).image-block__image
+    .image-block__head 
+      +button({
+        like: true
+      })
+      +button({
+        download: true
+      })
+    .image-block__footer
+      span.image-block__name=args.name 
+      span.image-block__date=args.date

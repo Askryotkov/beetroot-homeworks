@@ -1,0 +1,192 @@
+extends ./src/common/layout
+
+block style
+  link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous')
+  link(rel="stylesheet", href="./index.css")
+
+block title 
+  title Grid 
+
+block content 
+  .app 
+
+    //- * Header
+    +header()
+
+
+    .content 
+      //- * First block
+      .wrapper.content__item
+        .content__title Architectural Photography
+        .content__gallery 
+          +imageBlock({
+            class: 'image-block--1',
+            src: './assets/images/jasael.jpg',
+            alt: 'Portarait',
+            name: 'Jezael Melgoza',
+            date: '5 June 2020'
+          })
+          +imageBlock({
+            class: 'image-block--2',
+            src: './assets/images/tom.jpg',
+            alt: 'Portarait',
+            name: 'Tom W',
+            date: '30 March 2021'
+          })
+          +imageBlock({
+            class: 'image-block--3',
+            src: './assets/images/johan.jpg',
+            alt: 'Portarait',
+            name: 'Johan Mouchet',
+            date: '14 August 2019'
+          })
+          +imageBlock({
+            class: 'image-block--4',
+            src: './assets/images/federico.jpg',
+            alt: 'Portarait',
+            name: 'Federico Di Dio',
+            date: '29 October 2020'
+          })
+          +imageBlock({
+            class: 'image-block--5',
+            src: './assets/images/casey.jpg',
+            alt: 'Portarait',
+            name: 'Casey Horner',
+            date: '9 July 2021'
+          })
+          +imageBlock({
+            class: 'image-block--6',
+            src: './assets/images/alexander.jpg',
+            alt: 'Portarait',
+            name: 'Alexander Rotker',
+            date: '22 April 2022'
+          })
+      
+      //- * Block 2
+      .wrapper.content__item
+        .content__title Still Life Photography
+        .content__gallery.content__gallery--2
+          +imageBlock({
+            class: 'image-block--1',
+            src: './assets/images/robert.jpg',
+            alt: 'Portarait',
+            name: 'Robert Lukeman',
+            date: '30 June 2020'
+          })
+          +imageBlock({
+            class: 'image-block--2',
+            src: './assets/images/sean.jpg',
+            alt: 'Portarait',
+            name: 'Sean Oulashin',
+            date: '5 September 2019'
+          })
+          +imageBlock({
+            class: 'image-block--3',
+            src: './assets/images/john.jpg',
+            alt: 'Portarait',
+            name: 'John Fowler',
+            date: '10 August 2021'
+          })
+          +imageBlock({
+            class: 'image-block--4',
+            src: './assets/images/dave.jpg',
+            alt: 'Portarait',
+            name: 'Dave Hoefler',
+            date: '13 February 2021'
+          })
+          +imageBlock({
+            class: 'image-block--5',
+            src: './assets/images/leonard.jpg',
+            alt: 'Portarait',
+            name: 'Léonard Cotte',
+            date: '5 September 2019'
+          })
+          +imageBlock({
+            class: 'image-block--6',
+            src: './assets/images/rob.jpg',
+            alt: 'Portarait',
+            name: 'Rob Mulally',
+            date: '30 May 2020'
+          })
+
+      //- * Block 3
+      .wrapper.content__item
+        .content__title Still Life Photography
+        .content__gallery.content__gallery--3
+          +imageBlock({
+            class: 'image-block--1',
+            src: './assets/images/pooja.jpg',
+            alt: 'Portarait',
+            name: 'Pooja Chaudhary',
+            date: '30 June 2020'
+          })
+          +imageBlock({
+            class: 'image-block--2',
+            src: './assets/images/dom.jpg',
+            alt: 'Portarait',
+            name: 'Dom Hill',
+            date: '13 October 2021'
+          })
+          +imageBlock({
+            class: 'image-block--3',
+            src: './assets/images/seth.jpg',
+            alt: 'Portarait',
+            name: 'Seth Doyle',
+            date: '30 May 2020'
+          })
+          +imageBlock({
+            class: 'image-block--4',
+            src: './assets/images/devn.jpg',
+            alt: 'Portarait',
+            name: 'devn',
+            date: '30 June 2020'
+          })
+          +imageBlock({
+            class: 'image-block--5',
+            src: './assets/images/noah.jpg',
+            alt: 'Portarait',
+            name: 'Noah Buscher',
+            date: '13 February 2021'
+          })
+          +imageBlock({
+            class: 'image-block--6',
+            src: './assets/images/sincerely.jpg',
+            alt: 'Portarait',
+            name: 'Sincerely Media',
+            date: '7 January 2021'
+          })
+          +imageBlock({
+            class: 'image-block--7',
+            src: './assets/images/seth-blond.jpg',
+            alt: 'Portarait',
+            name: 'Seth Doyle',
+            date: '30 June 2020'
+          })
+          +imageBlock({
+            class: 'image-block--8',
+            src: './assets/images/melissa.jpg',
+            alt: 'Portarait',
+            name: 'Melissa Askew',
+            date: '29 April 2021'
+          })
+          +imageBlock({
+            class: 'image-block--9',
+            src: './assets/images/brooke.jpg',
+            alt: 'Portarait',
+            name: 'Brooke Cagle',
+            date: '5 August 2019'
+          })
+          +imageBlock({
+            class: 'image-block--10',
+            src: './assets/images/clem.jpg',
+            alt: 'Portarait',
+            name: 'Clem Onojeghuo',
+            date: '1 July 2021'
+          })
+        
+    //- * Footer
+    +footer()
+
+
+

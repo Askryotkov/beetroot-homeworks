@@ -1,0 +1,50 @@
+// * Base
+@import './scss/plugins/index';
+@import './scss/index';
+
+.content{
+margin-bottom: 120px;
+
+  &__item{
+    margin-top: 120px;
+    text-align: center;
+
+    &:first-child{
+      margin-top: 80px;
+    }
+  }
+
+  &__title{
+    font-family: $ff-delius-unicase;
+    font-size: em(36);
+  }
+
+  &__gallery{
+    padding-top: 80px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'a b b'
+    'c c d'
+    'e f f'
+    ;
+
+    &--2{
+      grid-template-areas: 
+      'a b b'
+      'c c d'
+      'e e f'
+      ;
+    }
+
+    &--3{
+      grid-template-areas: 
+      'a b c'
+      'd b e'
+      'f g e'
+      'f h h'
+      'i i j'
+      ;
+    }
+  }
+}

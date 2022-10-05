@@ -35,7 +35,7 @@
       max-width: 500px;
     }
 
-    @include media("<=small"){
+    @include media("<=phone"){
       left: 10px;
       top: 70px;
     }
@@ -48,7 +48,7 @@
   padding-top: 90px;
 
   &__title{
-    @include media("<=small"){
+    @include media("<=phone"){
       text-align: center;
     }
   }
@@ -60,10 +60,16 @@
     @include media("<=tablet") {
       flex-direction: column;
 
+      @include media("<=phone"){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       &--modified {
         flex-direction: row;
 
-        @include media("<=small"){
+        @include media("<=phone"){
           flex-direction: column;
         }
       }
@@ -90,7 +96,7 @@
           text-align: right;
           padding-top: 70px;
 
-          @include media("<=small"){
+          @include media("<=phone"){
             text-align: left;
           }
         }

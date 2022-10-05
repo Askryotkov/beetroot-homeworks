@@ -7,7 +7,6 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    //- TODO Icon
     link(rel='icon' type='image/x-icon' href='./favicon.ico')
     //- * Styles
     link(rel="stylesheet" href="index.css")
@@ -24,7 +23,7 @@ html(lang="en")
             srcset: './assets/images/bg-image.jpg',
             media: '(min-width: 769px)',
             srcset2: './assets/images/bg-image-768.jpg',
-            media2: '(min-width: 321px)',
+            media2: '(min-width: 481px)',
             img: './assets/images/bg-image-320.jpg',
             atl: 'Building photo'
           })
@@ -34,11 +33,7 @@ html(lang="en")
         .wrapper.content__wrapper
           h2.content__title Blog
           +content-item({
-            srcset: './assets/images/arrow.jpg',
-            media: '(min-width: 769px)',
-            srcset2: './assets/images/arrow-340-280.jpg',
-            media2: '(min-width: 320px)',
-            img: './assets/images/arrow-300-250.jpg',
+            img: './assets/images/arrow.jpg',
             alt: 'Arrow',
             subtitle: 'Technology, Interface Design',
             title: 'Using UX Design to Build a Sustainable Future',

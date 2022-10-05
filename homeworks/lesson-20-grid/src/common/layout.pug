@@ -1,0 +1,17 @@
+include ../components/index
+include ../elements/index
+
+doctype html
+html(lang='ua')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    block style
+    //- block script 
+    //-   script(src='https://kit.fontawesome.com/2f88a6bcc5.js' crossorigin='anonymous')
+    block title
+      title Template
+  body
+    include ../../assets/icons/symbol-defs.svg
+    .l-common
+      block content

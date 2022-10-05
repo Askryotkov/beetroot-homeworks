@@ -1,0 +1,26 @@
+// @import '../plugins/index';
+
+.button {
+  background-color: rgb($c-grey, 0.5);
+  transition: $t-normal;
+  border-radius: 8px;
+  border: none;
+
+  &:hover {
+    background-color: $c-grey;
+  }
+
+  &__link {
+    justify-content: center;
+    align-items: center;
+    color: $c-dark-grey;
+    display: flex;
+    height: 40px;
+    width: 40px;
+
+
+    &:hover{
+      color: $c-dark-grey;
+    }
+  }
+}

@@ -378,7 +378,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -495,16 +495,17 @@ path {
     padding-right: 20px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-content-item__wrapper {
     flex-direction: column-reverse;
     padding-top: 30px;
+    align-items: center;
   }
 }
 .c-content-item__wrapper--reverse {
   flex-direction: row-reverse;
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-content-item__wrapper--reverse {
     flex-direction: column-reverse;
   }
@@ -520,7 +521,7 @@ path {
     width: 100%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-content-item__wrapper--column-small {
     flex-direction: column;
   }
@@ -536,7 +537,7 @@ path {
     max-width: 700px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-content-item__wrapper--column-medium {
     margin-right: 0;
     padding-left: 0;
@@ -553,7 +554,7 @@ path {
     max-width: 340px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-content-item__image-block {
     margin-top: 35px;
   }
@@ -571,19 +572,21 @@ path {
     display: flex;
     flex-direction: row-reverse;
   }
+  .c-content-item--modified .c-content-item__wrapper--column-small .c-review--small {
+    margin-right: 10px;
+  }
 }
-@media (max-width: 768px) and (max-width: 320px) {
+@media (max-width: 768px) and (max-width: 480px) {
   .c-content-item--modified .c-content-item__wrapper--column-small {
     flex-direction: column;
   }
 }
 
 .c-review {
-  padding-right: 120px;
   padding-bottom: 95px;
   padding-left: 30px;
   padding-top: 85px;
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
 }
 @media (max-width: 768px) {
@@ -595,7 +598,7 @@ path {
     padding-top: 0;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .c-review {
     padding-left: 0;
   }
@@ -644,15 +647,27 @@ path {
   }
 }
 .c-review--reverse {
-  padding-left: 120px;
   padding-right: 20px;
+  max-width: 448px;
+  padding-left: 0;
 }
 @media (max-width: 768px) {
   .c-review--reverse {
+    display: flex;
+    justify-content: center;
     padding-left: 20px;
     padding-bottom: 0;
     padding-right: 0;
     padding-top: 0;
+  }
+  .c-review--reverse:last-child {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .c-review--reverse:last-child {
+    padding-right: 0;
   }
 }
 .c-review--small {
@@ -685,9 +700,15 @@ path {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 480px) {
+  .heading {
+    margin-left: 20px;
+    display: block;
+  }
+}
 @media (max-width: 320px) {
   .heading {
-    display: block;
+    margin-left: 0;
   }
 }
 .heading__link {
@@ -695,7 +716,7 @@ path {
   letter-spacing: 0.1em;
   transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .heading__link {
     margin-top: 10px;
   }
@@ -983,7 +1004,7 @@ path {
     max-width: 500px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .banner__title {
     left: 10px;
     top: 70px;
@@ -993,7 +1014,7 @@ path {
 .content {
   padding-top: 90px;
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .content__title {
     text-align: center;
   }
@@ -1006,11 +1027,20 @@ path {
   .content__block {
     flex-direction: column;
   }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .content__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
   .content__block--modified {
     flex-direction: row;
   }
 }
-@media (max-width: 768px) and (max-width: 320px) {
+@media (max-width: 768px) and (max-width: 480px) {
   .content__block--modified {
     flex-direction: column;
   }
@@ -1036,7 +1066,7 @@ path {
     padding-top: 70px;
   }
 }
-@media (max-width: 768px) and (max-width: 320px) {
+@media (max-width: 768px) and (max-width: 480px) {
   .content__info-block .content__info-item:last-child {
     text-align: left;
   }

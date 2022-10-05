@@ -14,10 +14,7 @@ mixin content-item(args={})
   .c-content-item(class=args.class)
     .c-content-item__wrapper(class=classes)
       .c-content-item__image-block(style=styles)
-        picture.content-item__picture
-          source(srcset=args.srcset, media=args.media)
-          source(srcset=args.srcset2, media=args.media2)
-          img.c-content-item__image(src=args.img, alt=args.alt)
+        img.c-content-item__image(src=args.img, alt=args.alt)
       .c-review(class=classes2)
         .c-review__wrapper
           .c-review__head

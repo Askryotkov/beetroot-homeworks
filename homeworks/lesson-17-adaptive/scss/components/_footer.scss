@@ -78,10 +78,10 @@
 
   &__link:hover {
     background-color: $c-grey-700;
-  }
-  &__link:hover .icon {
+  & .icon {
     color: $c-white;
   }
+}
 
   &__info {
     bottom: 30px;

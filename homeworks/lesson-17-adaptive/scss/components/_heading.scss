@@ -1,8 +1,13 @@
 .heading {
   display: flex;
   justify-content: space-between;
-  @include media("<=small"){
+  @include media("<=phone"){
+    margin-left: 20px;
     display: block;
+  }
+
+  @include media("<=small"){
+    margin-left: 0;
   }
 
   &__link {
@@ -10,7 +15,7 @@
     letter-spacing: 0.1em;
     transition: $t-normal;
 
-    @include media("<=small"){
+    @include media("<=phone"){
       margin-top: 10px;
     }
 

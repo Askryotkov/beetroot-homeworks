@@ -1,0 +1,75 @@
+.image-block {
+  transition: $t-normal;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  opacity: 0.7;
+
+  &:hover{
+    opacity: 1;
+
+    & .image-block__head{
+      opacity: 1;
+    }
+  }
+
+  &--1 {
+    grid-area: a;
+  }
+  &--2 {
+    grid-area: b;
+  }
+  &--3 {
+    grid-area: c;
+  }
+  &--4 {
+    grid-area: d;
+  }
+  &--5 {
+    grid-area: e;
+  }
+  &--6 {
+    grid-area: f;
+  }
+  &--7{
+    grid-area: g;
+  }
+  &--8{
+    grid-area: h;
+  }
+  &--9{
+    grid-area: i;
+  }
+  &--10{
+    grid-area: j;
+  }
+
+  &__image {
+    border-radius: 20px;
+  }
+
+  &__head {
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    right: 20px;
+    left: 20px;
+    opacity: 0;
+    z-index: 5;
+    top: 20px;
+  }
+  &__footer {
+    justify-content: space-between;
+    position: absolute;
+    color: $c-white;
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 5;
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+}

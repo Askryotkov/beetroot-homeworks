@@ -11,15 +11,16 @@
       justify-content: space-between;
     }
 
-    @include media("<=small"){
+    @include media("<=phone"){
       flex-direction: column-reverse;
       padding-top: 30px;
+      align-items: center;
     }
 
     &--reverse {
       flex-direction: row-reverse;
 
-      @include media("<=small"){
+      @include media("<=phone"){
         flex-direction: column-reverse;
       }
     }
@@ -34,7 +35,7 @@
         width: 100%;
       }
 
-      @include media("<=small"){
+      @include media("<=phone"){
         flex-direction: column;
       }
     }
@@ -49,7 +50,7 @@
         max-width: 700px;
       }
 
-      @include media("<=small"){
+      @include media("<=phone"){
         margin-right: 0;
         padding-left: 0;
       }
@@ -68,7 +69,7 @@
       max-width: 340px;
       
     }
-    @include media("<=small"){
+    @include media("<=phone"){
       margin-top: 35px;
     }
   }
@@ -84,7 +85,13 @@
         display: flex;
         flex-direction: row-reverse;
 
-        @include media("<=small"){
+      .c-review--small{
+        margin-right: 10px;
+      }
+
+
+
+        @include media("<=phone"){
           flex-direction: column;
         }
       }
@@ -93,11 +100,11 @@
 }
 
 .c-review {
-  padding-right: 120px;
+  // padding-right: 120px;
   padding-bottom: 95px;
   padding-left: 30px;
   padding-top: 85px;
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
 
   @include media("<=tablet") {
@@ -107,7 +114,7 @@
     padding-right: 0;
     padding-top: 0;
   }
-  @include media("<=small"){
+  @include media("<=phone"){
     padding-left: 0;
   }
 
@@ -160,10 +167,22 @@
   }
 
   &--reverse {
-    padding-left: 120px;
     padding-right: 20px;
+    max-width: 448px;
+    padding-left: 0;
 
     @include media("<=tablet") {
+      display: flex;
+      justify-content: center;
+
+      &:last-child{
+        padding-left: 0;
+        padding-right: 20px;
+
+        @include media("<=phone"){
+          padding-right: 0;
+        }
+      }
       padding-left: 20px;
       padding-bottom: 0;
       padding-right: 0;
