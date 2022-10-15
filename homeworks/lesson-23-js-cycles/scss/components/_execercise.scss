@@ -1,0 +1,20 @@
+.excercise{
+  border: 2px solid $c-dark-grey;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  &__title{
+    padding-bottom: 15px;
+    font-size: 30px;
+  }
+  
+  &__subtitle{
+    padding-bottom: 15px;
+    
+    font-size: 18px;
+  }
+}

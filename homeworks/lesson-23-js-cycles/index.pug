@@ -1,0 +1,72 @@
+include ./src/elements/index
+include ./src/components/index
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    //- TODO Icon
+    link(rel='icon' type='image/x-icon' href='./favicon.ico')
+    //- * Styles
+    link(rel="stylesheet", href="index.css")
+    title Java Script - Cycles 
+    
+  body 
+    .app 
+    .wrapper.content
+      +excercise({
+        title: 'Задача 1',
+        subtitle: 'Определить возрас пользователя',
+        text: 'Push for prompt',
+        id: 'js-button-task-1'
+      })
+      +excercise({
+        title: 'Задача 2',
+        subtitle: 'Получить число от 1-9 и вывести соответствующий смвол',
+        text: 'Push for prompt',
+        id: 'js-button-task-2'
+      })
+      +excercise({
+        title: 'Задача 3',
+        subtitle: 'Сумма всех чисел, в заданном диапазоне',
+        text: 'Push for prompt',
+        id: 'js-button-task-3'
+      })
+      +excercise({
+        title: 'Задача 4',
+        subtitle: 'Наибольший общий делитель двух чисел',
+        text: 'Push for prompt',
+        id: 'js-button-task-4'
+      })
+      +excercise({
+        title: 'Задача 5',
+        subtitle: 'Сумма покупки со скидкой',
+        text: 'Push for prompt',
+        id: 'js-button-task-5'
+      })
+      +excercise({
+        title: 'Задача 6',
+        subtitle: 'Ввести 10 числел, посчитать статистику, сколько из них положительных, отрицательных и нулей',
+        text: 'Push for prompt',
+        id: 'js-button-task-6'
+      })
+      +excercise({
+        title: 'Задача 7',
+        subtitle: 'Дни недели',
+        text: 'Push for prompt',
+        id: 'js-button-task-7'
+      })
+      +excercise({
+        title: 'Задача 8',
+        subtitle: 'Таблица умножения',
+        text: 'Push for prompt',
+        id: 'js-button-task-8'
+      })
+      //- *Script
+      script(defer src="./index.js")  
+
+
+
+

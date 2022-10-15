@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: $c-grey;
+  font-size: $fs-base + px;
+  font-family: $ff-roboto;
+}
+
+.wrapper{
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1470px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.content{
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}

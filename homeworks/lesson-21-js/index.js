@@ -1,14 +1,14 @@
+const EXCHANGE_RATE = 46.61;
+
 // Name
-const questionName = prompt("Как тебя зовут?");
-let userName = questionName;
+const userName = prompt("Как тебя зовут?");
 // Приветствие с именем
 alert(`Привет, ${userName}`);
 
 // Age
 const questionBirth = prompt("Какой у тебя год рождения?");
 // Вычисление возраста
-const now = new Date;
-let today = new Date(now.getFullYear());
+const today = new Date().getFullYear
 let userAge = today - questionBirth;
 
 alert(`Вау, тебе ${userAge} лет`);
@@ -39,7 +39,7 @@ alert(`Поторопись, нужно двигаться со скорость
 alert("Хочешь обменять деньги перед дорогой по хорошему курсу?")
 // Converter
 const money = prompt("Сколько $ хочешь обменять по курсу 46.61?")
-const exchangeRate = 46.61;
+
 let exchangeResult = exchangeRate * money ;
 
 alert(`Получится ${exchangeResult} грн`);
